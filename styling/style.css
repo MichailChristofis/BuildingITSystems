@@ -149,6 +149,7 @@
   margin-top: 1.3vw;
 }
 .in {
+  font-size: 1.2vw;
   padding-left: 4vw;
   border-radius: 2vw;
   width: 38vw;
@@ -191,8 +192,10 @@
   border-radius: 3vw;
 }
 .foodtype button {
+  font-size: 1.2vw;
+  text-align: center;
   display: inline-block;
-  width: 8vw;
+  width: 9vw;
   padding: 0.5vw 1vw;
   border-radius: 2vw;
   border: none;
@@ -241,6 +244,7 @@
   z-index: 2;
 }
 .like {
+  width: 1.9vw;
   top: 1vw;
 }
 .duration {
@@ -249,12 +253,21 @@
   display: flex;
   align-items: center;
 }
+h3 {
+  font-size: 1.6vw;
+}
+.duration img {
+  width: 1.4vw;
+}
+.dur {
+  font-size: 1.3vw;
+}
 .food-text {
   display: block;
   margin: 0.5vw 0;
 }
 .rating img {
-  scale: 0.9;
+  width: 1.4vw;
 }
 footer {
   padding: 4vw 8vw 4vw 8vw;

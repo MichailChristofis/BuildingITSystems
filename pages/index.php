@@ -51,16 +51,16 @@
     <img class="svg" src="./../assets/headsmall.svg" alt="">
     <div class="foodtype flex justifycenter">
       <button>
-        Breakfast
+        Spanish
       </button>
       <button>
-        Brunch
+        French
       </button>
       <button>
-        Lunch
+        English
       </button>
       <button>
-        Dinner
+        Australian
       </button>
     </div>
     <main>
@@ -71,7 +71,7 @@
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
-              <span>40 min</span>
+              <span class="dur">40 min</span>
             </div>
             <img class="images" src="./../assets/burger.png" alt="burger image">
           </div>
@@ -94,7 +94,7 @@
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
-              <span>40 min</span>
+              <span class="dur">40 min</span>
             </div>
             <img class="images" src="./../assets/meat.png" alt="burger image">
           </div>
@@ -117,7 +117,7 @@
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
-              <span>40 min</span>
+              <span class="dur">40 min</span>
             </div>
             <img class="images" src="./../assets/steak.png" alt="burger image">
           </div>
@@ -140,7 +140,7 @@
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
-              <span>40 min</span>
+              <span class="dur">40 min</span>
             </div>
             <img class="images" src="./../assets/sushi.png" alt="burger image">
           </div>
@@ -163,7 +163,7 @@
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
-              <span>40 min</span>
+              <span class="dur">40 min</span>
             </div>
             <img class="images" src="./../assets/rice.png" alt="burger image">
           </div>
@@ -186,7 +186,7 @@
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
-              <span>40 min</span>
+              <span class="dur">40 min</span>
             </div>
             <img class="images" src="./../assets/chicken.png" alt="burger image">
           </div>
