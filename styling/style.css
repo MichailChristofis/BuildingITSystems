@@ -192,6 +192,7 @@
 }
 .foodtype button {
   display: inline-block;
+  width: 8vw;
   padding: 0.5vw 1vw;
   border-radius: 2vw;
   border: none;
