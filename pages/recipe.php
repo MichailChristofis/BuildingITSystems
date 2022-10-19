@@ -6,7 +6,7 @@
     <link id='stylecss' type="text/css" rel="stylesheet" href="./../styling/style.css">
   </head>
   <body>
-    <div>
+    <div class="over">
       <div class="to">
         <div class="flex spacebetween aligncenter">
           <span class="tit">RecipeWise</span>
@@ -27,11 +27,37 @@
         </div>
       </div>
       <img class="svg" src="./../assets/headsmall.svg" alt="">
-    </div>
-    <div class="banner">
-      <img src="./../assets/chicken1.png" alt="chicken image">
-      <span>Grilled Chicken Breast with Bacon</span>
-
+      <div class="banner">
+        <img class="bannerimg" src="./../assets/recipes/chicken1.png" alt="chicken image">
+        <span>Grilled Chicken Breast with Bacon</span>
+        <div>
+          <div>
+            <img src="./../assets/star-solid.png" alt="solid star image">
+            <img src="./../assets/star-solid.png" alt="solid star image">
+            <img src="./../assets/star-solid.png" alt="solid star image">
+            <img src="./../assets/star-solid.png" alt="solid star image">
+            <img src="./../assets/star-solid.png" alt="solid star image">
+          </div>
+          <div>
+            <div>
+              <img src="./../assets/protein.svg" alt="protein">
+              <span>60g protein</span>
+            </div>
+            <div>
+              <img src="./../assets/carbs.svg" alt="protein">
+              <span>20g carbs</span>
+            </div>
+            <div>
+              <img src="./../assets/calories.svg" alt="calories">
+              <span>600 kcal</span>
+            </div>
+            <div>
+              <img src="./../assets/clock.svg" alt="duration">
+              <span>40 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <footer>
