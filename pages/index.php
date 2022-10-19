@@ -47,10 +47,8 @@
           #snacks
         </button>
       </div>
-      <div class="svg">
-        
-      </div>
     </div>
+    <img class="svg" src="./../assets/headsmall.svg" alt="">
     <div class="foodtype flex justifycenter">
       <button>
         Breakfast

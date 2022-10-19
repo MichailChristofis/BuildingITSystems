@@ -91,6 +91,9 @@
   right: -0.8vw;
   width: 1.6vw;
 }
+.svg {
+  width: 100%;
+}
 .im {
   border-radius: 50%;
   width: 4vw;
@@ -99,8 +102,8 @@
 .profile-box {
   display: none;
   position: fixed;
-  top: 4vw;
-  right: 4vw;
+  top: 1.6vw;
+  right: 2vw;
   padding: 2.5vw 2vw;
   background-color: #feefe5;
   text-align: center;
@@ -177,9 +180,6 @@
 .foodtype {
   margin-top: 1.6vw;
   gap: 1.6vw;
-}
-.svg {
-  padding: 100px;
 }
 .popsearch button {
   display: inline-block;
