@@ -9,21 +9,204 @@
     <div class="to">
       <div class="flex spacebetween aligncenter">
         <span class="tit">RecipeWise</span>
-        <img class="im" src="./../assets/prof.png" alt="profile image">
+        <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
+        <div class="profile-box">
+          <div class="profile-in">
+            <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
+            <img class="im" src="./../assets/prof.png" alt="profile image">
+          </div>
+          <span>@jennifer.daniels</span>
+          <h5>Jennifer Daniels</h5>
+          <div class="profilelinks">
+            <a href="">Account</a>
+            <a href="">Liked Recipes</a>
+            <a href="">Log Out</a>
+          </div>
+        </div>
       </div>
       <div class="search">
         <span class="search1">search for</span>
         <span class="search2">&nbsp;mexican...</span>
       </div>
-      <div class="flex justifycenter">
-        <input type="text" class="in">
+      <div class="flex justifycenter searchdiv">
+        <input type="text" class="in" placeholder="Search">
+        <img class="magnifying" src="./../assets/magnifying-glass.png" alt="Magnifying glass">
+        <img class="shuffle" src="./../assets/shuffle.png" alt="Shuffle image">
       </div>
-      <div class="flex justifycenter">
-        <img src="./../assets/magnifying-glass.png" alt="Magnifying glass">
-        <span>Search</span>
-        <img src="./../assets/shuffle.png" alt="Shuffle image">
+      <div class="popsearch flex justifycenter">
+        <button>
+          #most-popular
+        </button>
+        <button>
+          #quickneasy
+        </button>
+        <button>
+          #dessert
+        </button>
+        <button>
+          #snacks
+        </button>
+      </div>
+      <div class="svg">
+        
       </div>
     </div>
+    <div class="foodtype flex justifycenter">
+      <button>
+        Breakfast
+      </button>
+      <button>
+        Brunch
+      </button>
+      <button>
+        Lunch
+      </button>
+      <button>
+        Dinner
+      </button>
+    </div>
+    <main>
+      <section class="foodsection">
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              &nbsp;
+              <span>40 min</span>
+            </div>
+            <img class="images" src="./../assets/burger.png" alt="burger image">
+          </div>
+          <div class="food-text">
+            <h3>
+              The Breakfast Burger
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              &nbsp;
+              <span>40 min</span>
+            </div>
+            <img class="images" src="./../assets/meat.png" alt="burger image">
+          </div>
+          <div class="food-text">
+            <h3>
+              Flank Steak
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              &nbsp;
+              <span>40 min</span>
+            </div>
+            <img class="images" src="./../assets/steak.png" alt="burger image">
+          </div>
+          <div class="food-text">
+            <h3>
+              Steak From Heaven
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              &nbsp;
+              <span>40 min</span>
+            </div>
+            <img class="images" src="./../assets/sushi.png" alt="burger image">
+          </div>
+          <div class="food-text">
+            <h3>
+              Salmon Nigiri
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              &nbsp;
+              <span>40 min</span>
+            </div>
+            <img class="images" src="./../assets/rice.png" alt="burger image">
+          </div>
+          <div class="food-text">
+            <h3>
+              Fried Rice
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              &nbsp;
+              <span>40 min</span>
+            </div>
+            <img class="images" src="./../assets/chicken.png" alt="burger image">
+          </div>
+          <div class="food-text">
+            <h3>
+              Grilled Chicken Breast
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
   <footer>
     <div class="flex spacebetween">
@@ -37,9 +220,15 @@
           <span class="colw popno emsi">Subject:</span>
           <input type="text" class="subject">
         </div>
-        <div>
+        <div class="message">
           <span class="bl colw popno mabo emsi">Message:</span>
-          <textarea name="message" id="mes" class="bl" cols="35" rows="6"></textarea>
+          <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
+          <span class="meschar">
+            0/256
+          </span>
+          <button type="submit">
+            <img src="./../assets/plane.svg" alt="plane image">
+          </button>
         </div>
       </div>
       <div>
@@ -63,7 +252,7 @@
         </div>
         <div class="socialdiv flex spacebetween">
           <img class="socialim" src="./../assets/facebook.png" alt="Facebook image">
-          <img class="socialim" src="./../assetes/instagram.png" alt="Instagram image">
+          <img class="socialim" src="./../assets/instagram.png" alt="Instagram image">
           <img class="socialim" src="./../assets/tiktok.png" alt="TikTok image">
           <img class="socialim" src="./../assets/youtube.png" alt="YouTube image">
           <img class="socialim" src="./../assets/twitter.png" alt="Twitter image">
@@ -73,4 +262,7 @@
     <hr>
     <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
   </footer>
+  <script src="./script.js">
+    
+  </script>
 </html>
