@@ -1,0 +1,176 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./../Poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./../Poppins/Poppins-ExtraBold.ttf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./../Poppins/Poppins-Light.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./../Poppins/Poppins-ExtraLight.ttf);
+  font-weight: 100;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans";
+}
+.to {
+  padding: 1vw 2vw 0vw 2vw;
+  background-color: #fa003f;
+}
+.flex {
+  display: flex;
+}
+.spacebetween {
+  justify-content: space-between;
+}
+.justifycenter {
+  justify-content: center;
+}
+.aligncenter {
+  align-items: center;
+}
+.posab {
+  position: absolute;
+}
+.bl {
+  display: block;
+}
+.colw {
+  color: white;
+}
+.popbo {
+  font-family: "Poppins";
+  font-weight: bold;
+}
+.mato {
+  margin-top: 1vw;
+}
+.mabo {
+  margin-bottom: 0.5vw;
+}
+.popno {
+  font-family: "Poppins";
+  font-weight: normal;
+}
+.consi {
+  font-size: 1.3vw;
+}
+.emsi {
+  font-size: 1.1vw;
+}
+.tit {
+  color: white;
+  font-size: 3.5vw;
+  font-weight: bolder;
+  font-family: "Poppins";
+}
+.im {
+  border-radius: 50%;
+  width: 4vw;
+  height: auto;
+}
+.search {
+  display: flex;
+  justify-content: center;
+}
+.search1 {
+  font-size: 3.7vw;
+  color: white;
+  font-weight: bold;
+  font-family: "Poppins";
+}
+.search2 {
+  font-size: 3.7vw;
+  color: #ffd5df;
+  font-weight: bold;
+  font-family: "Poppins";
+}
+.in {
+  border-radius: 2vw;
+  width: 38vw;
+  height: 3.5vw;
+  margin-top: 1.3vw;
+}
+footer {
+  padding: 4vw 8vw 4vw 8vw;
+  background-color: #1e1e1e;
+}
+.contactw {
+  width: 20vw;
+}
+.email {
+  width: 12vw;
+  height: 1.5vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.subject {
+  width: 12vw;
+  height: 1.5vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#mes {
+  width: 20vw;
+  height: 5.5vw;
+}
+.log {
+  margin-top: -1.8vw;
+  margin-bottom: 1vw;
+  width: 7vw;
+  height: 7vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.emicon {
+  margin-right: 1.5vw;
+  height: 1.1vw;
+  width: auto;
+}
+.emtext {
+  text-decoration: underline;
+}
+.phicon {
+  margin-right: 1.5vw;
+  height: 1.5vw;
+  width: auto;
+}
+.contacttop {
+  margin-top: 1.2vw;
+}
+.socialim {
+  width: 1.9vw;
+  height: 1.9vw;
+}
+.socialdiv {
+  margin-top: 1.8vw;
+  width: 100%;
+  padding-left: 1.6vw;
+  padding-right: 1.6vw;
+}
+hr {
+  margin-top: 4.5vw;
+  color: #979797;
+}
+.allrights {
+  display: block;
+  color: white;
+  font-size: 1vw;
+  font-family: "Poppins";
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+  margin-top: 1vw;
+}
