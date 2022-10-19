@@ -10,7 +10,7 @@
       <div class="flex spacebetween aligncenter">
         <span class="tit">RecipeWise</span>
         <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
-        <div class="profile-box">
+        <div class="profile-box profempty">
           <div class="profile-in">
             <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
             <img class="im" src="./../assets/prof.png" alt="profile image">
@@ -85,7 +85,7 @@
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-regular.png" alt="empty star">
+            <img src="./../assets/star-solid.png" alt="solid star">
           </div>
         </div>
         <div>
@@ -108,7 +108,7 @@
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-regular.png" alt="empty star">
+            <img src="./../assets/star-solid.png" alt="solid star">
           </div>
         </div>
         <div>
@@ -131,7 +131,7 @@
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-regular.png" alt="empty star">
+            <img src="./../assets/star-solid.png" alt="solid star">
           </div>
         </div>
         <div>
@@ -154,7 +154,7 @@
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-regular.png" alt="empty star">
+            <img src="./../assets/star-solid.png" alt="solid star">
           </div>
         </div>
         <div>
@@ -200,7 +200,7 @@
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
             <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-regular.png" alt="empty star">
+            <img src="./../assets/star-solid.png" alt="solid star">
           </div>
         </div>
       </section>

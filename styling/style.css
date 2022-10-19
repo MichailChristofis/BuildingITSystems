@@ -75,7 +75,10 @@
   font-weight: bolder;
   font-family: "Poppins";
 }
-.toggleprof:focus + .profile-box {
+.profempty {
+  display: none;
+}
+.profshow {
   display: block !important;
 }
 .profile-in {
@@ -87,8 +90,8 @@
 }
 .profile-in .edit {
   position: absolute;
-  bottom: 1vw;
-  right: -0.8vw;
+  bottom: 0.3vw;
+  right: -0.4vw;
   width: 1.6vw;
 }
 .svg {
@@ -100,7 +103,6 @@
   height: auto;
 }
 .profile-box {
-  display: none;
   position: fixed;
   top: 1.6vw;
   right: 2vw;
