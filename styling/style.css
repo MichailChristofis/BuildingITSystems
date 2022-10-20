@@ -443,3 +443,36 @@ hr {
   display: block;
   width: 100%;
 }
+.account {
+  width: 100%;
+  padding: 10vw 30vw 10vw 10vw;
+}
+.red {
+  color: #fa003f;
+}
+.t {
+  font-size: 3vw;
+  font-weight: bold;
+}
+.det {
+  display: grid;
+  grid-template-columns: 15% 75%;
+  margin: 5vw auto;
+  max-width: 97vw;
+}
+.fidiv {
+  border-right: 1px solid #3c3c3c;
+}
+.fidiv h5 {
+  font-weight: normal;
+  margin-bottom: 1vw;
+}
+.lah5 {
+  margin-bottom: 0vw !important;
+}
+.setprof {
+  border-radius: 10vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

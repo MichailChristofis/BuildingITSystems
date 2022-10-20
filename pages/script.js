@@ -13,11 +13,13 @@ popsearch.addEventListener("click", (e) => {
 foodsection.addEventListener("click", (e) => {
   if (e.target.nodeName === "IMG" && e.target.classList.contains("full")) {
     e.target.src = "./../assets/heart.png";
+    e.target.classList.toggle("empty");
+    e.target.classList.toggle("full");
   } else if (e.target.nodeName === "IMG" && e.target.classList.contains("empty")) {
     e.target.src = "./../assets/fullheart.svg";
+    e.target.classList.toggle("empty");
+    e.target.classList.toggle("full");
   }
-  e.target.classList.toggle("empty");
-  e.target.classList.toggle("full");
 });
 
 message.addEventListener("input", () => {
