@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="over">
-      <div class="to">
+      <div class="to to2">
         <div class="flex spacebetween aligncenter">
           <span class="tit">RecipeWise</span>
           <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
@@ -25,20 +25,22 @@
             </div>
           </div>
         </div>
+        <img class="svg" src="./../assets/headsmall.svg" alt="">
       </div>
-      <img class="svg" src="./../assets/headsmall.svg" alt="">
       <div class="banner">
         <img class="bannerimg" src="./../assets/recipes/chicken1.png" alt="chicken image">
-        <span>Grilled Chicken Breast with Bacon</span>
-        <div>
+        <div class="details flex spacebetween">
           <div>
-            <img src="./../assets/star-solid.png" alt="solid star image">
-            <img src="./../assets/star-solid.png" alt="solid star image">
-            <img src="./../assets/star-solid.png" alt="solid star image">
-            <img src="./../assets/star-solid.png" alt="solid star image">
-            <img src="./../assets/star-solid.png" alt="solid star image">
+            <h2>Grilled Chicken Breast with Bacon</h2>
+            <div>
+              <img src="./../assets/star-solid.png" alt="solid star image">
+              <img src="./../assets/star-solid.png" alt="solid star image">
+              <img src="./../assets/star-solid.png" alt="solid star image">
+              <img src="./../assets/star-solid.png" alt="solid star image">
+              <img src="./../assets/star-solid.png" alt="solid star image">
+            </div>
           </div>
-          <div>
+          <div class="flex nutrients">
             <div>
               <img src="./../assets/protein.svg" alt="protein">
               <span>60g protein</span>
@@ -59,6 +61,99 @@
         </div>
       </div>
     </div>
+    <main class="ing spacebetween">
+      <div class="ingredients">
+        <h5>Ingredients</h5>
+        <h6>For 4 servings</h6>
+        <ol>
+          <li>
+            4 pcs chicken breast fillets
+          </li>
+          <li>
+            4 slices of bacon
+          </li>
+          <li>
+            1 dl of oil
+          </li>
+          <li>
+            2tbsp soy sauce
+          </li>
+          <li>
+            2 tbsp chili sauce
+          </li>
+          <li>
+            4 shallots
+          </li>
+          <li>
+            1tbsp salt
+          </li>
+          <li>
+            4 tbsp ground black pepper
+          </li>
+          <li>
+            2 cloves of garlic
+          </li>
+          <li>
+            0.5 mk strong paprika cream
+          </li>
+          <li>
+            1 bouillon cube
+          </li>
+        </ol>
+        <h5>Nutrition Info</h5>
+        <ul>
+          <li>
+            Calories <b>XXX</b>
+          </li>
+          <li>
+            Carbs <b>XXXg</b>
+          </li>
+          <li>
+            Fiber <b>XXXg</b>
+          </li>
+          <li>
+            Protein <b>XXXg</b>
+          </li>
+          <li>
+            Sugar <b>XXXg</b>
+          </li>
+        </ul>
+      </div>
+      <div class="info">
+        <h5>
+          Method
+        </h5>
+        <ol>
+          <li>
+            <p>
+              Mix the marinade ingredients, oil, soy sauce and chili sauce,
+              finely chopped scallions, salt, pepper, garlic and paprika cream,
+              pour into a double nylon bag, add the chicken breast fillets, shake
+              well and refrigerate overnight.
+            </p>
+            <img class="recipeimg" src="./../assets/recipes/chicken2.png" alt="">
+          </li>
+          <li>
+            <p>
+              Mix the marinade ingredients, oil, soy sauce and chili sauce,
+              finely chopped scallions, salt, pepper, garlic and paprika cream,
+              pour into a double nylon bag, add the chicken breast fillets, shake
+              well and refrigerate overnight.
+            </p>
+            <img src="./../assets/recipes/chicken3.png" alt="">
+          </li>
+          <li>
+            <p>
+              Mix the marinade ingredients, oil, soy sauce and chili sauce,
+              finely chopped scallions, salt, pepper, garlic and paprika cream,
+              pour into a double nylon bag, add the chicken breast fillets, shake
+              well and refrigerate overnight.
+            </p>
+            <img src="./../assets/recipes/chicken4.png" alt="">
+          </li>
+        </ol>
+      </div>
+    </main>
   </body>
   <footer>
     <div class="flex spacebetween">
@@ -114,7 +209,7 @@
     <hr>
     <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
   </footer>
-  <script src="./script.js">
+  <script src="./recipescript.js">
     
   </script>
 </html>
