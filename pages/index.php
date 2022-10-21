@@ -18,7 +18,7 @@
           <span>@jennifer.daniels</span>
           <h5>Jennifer Daniels</h5>
           <div class="profilelinks">
-            <a href="">Account</a>
+            <a href="./profile.php">Account</a>
             <a href="">Liked Recipes</a>
             <a href="">Log Out</a>
           </div>
@@ -188,11 +188,11 @@
               &nbsp;
               <span class="dur">40 min</span>
             </div>
-            <img class="images" src="./../assets/chicken.png" alt="burger image">
+            <a href="./recipe.php"><img class="images" src="./../assets/chicken.png" alt="burger image"></a>
           </div>
           <div class="food-text">
             <h3>
-              Grilled Chicken Breast
+              <a class="reclink" href="./recipe.php">Grilled Chicken Breast</a>
             </h3>
           </div>
           <div class="rating">

@@ -595,3 +595,7 @@ th {
   border-style: none;
   margin-top: 1vw;
 }
+.reclink {
+  text-decoration: none;
+  color: black;
+}
