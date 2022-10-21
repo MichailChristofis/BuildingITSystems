@@ -34,12 +34,103 @@
       </div>
       <div class="det spacebetween">
         <div class="fidiv">
-          <h5>My Profile</h5>
-          <h5>History</h5>
-          <h5 class="lah5">Security</h5>
+          <button class="op nu1">My Profile</button>
+          <button class="op nu2">History</button>
+          <button class="lah5 op nu3">Security</button>
         </div>
-        <div>
+        <div class="topprof no1">
           <img class="setprof" src="./../assets/prof.png" alt="">
+          <div>
+            <button class="changepic">Change Profile Picture</button>
+            <button class="change flex justifycenter aligncenter">
+              <img src="./../assets/delete.svg" alt="Delete button">
+              <span>Remove</span>
+            </button>
+          </div>
+        </div>
+        <form class="myprofile" action="./profchanges.php" method="POST">
+          <fieldset>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+          </fieldset>
+          <fieldset>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+          </fieldset>
+          <fieldset>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          </fieldset>
+          <fieldset>
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+          </fieldset>
+          <div class="submit">
+            <button>Submit</button>
+          </div>
+        </form>
+        <div class="no2 nodisplay">
+          <table>
+            <tr>
+              <th class="da">Date</th>
+              <th class="se">Search</th>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+            <tr>
+              <td>dd/mm/yyyy</td>
+              <td>Lorem Ipsum</td>
+            </tr>
+          </table>
+        </div>
+        <div class="no3 nodisplay">
+          <form class="creds" action="./profchanges.php" method="POST"> 
+            <fieldset>
+              <label for="uname">Username:</label>
+              <input type="text" id="uname" name="uname" required>
+            </fieldset>
+            <fieldset>
+              <label for="opass">Old Password:</label>
+              <input type="text" id="opass" name="opass" required>
+            </fieldset>
+            <fieldset>
+              <label for="npass">New Password:</label>
+              <input type="text" id="npass" name="npass" required>
+            </fieldset>
+            <fieldset>
+              <label for="mobile">Confirm New Password:</label>
+              <input type="tel" id="mobile" name="mobile" required>
+            </fieldset>
+            <div class="credsubmit">
+              <button>Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </main>
@@ -98,7 +189,6 @@
     <hr>
     <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
   </footer>
-  <script src="./recipescript.js">
-    
-  </script>
+  <script src="./recipescript.js"></script>
+  <script src="./profscript.js"></script>
 </html>

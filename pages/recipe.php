@@ -62,62 +62,64 @@
       </div>
     </div>
     <main class="ing spacebetween">
-      <div class="ingredients">
-        <h5>Ingredients</h5>
-        <h6>For 4 servings</h6>
-        <ol>
-          <li>
-            4 pcs chicken breast fillets
-          </li>
-          <li>
-            4 slices of bacon
-          </li>
-          <li>
-            1 dl of oil
-          </li>
-          <li>
-            2tbsp soy sauce
-          </li>
-          <li>
-            2 tbsp chili sauce
-          </li>
-          <li>
-            4 shallots
-          </li>
-          <li>
-            1tbsp salt
-          </li>
-          <li>
-            4 tbsp ground black pepper
-          </li>
-          <li>
-            2 cloves of garlic
-          </li>
-          <li>
-            0.5 mk strong paprika cream
-          </li>
-          <li>
-            1 bouillon cube
-          </li>
-        </ol>
-        <h5>Nutrition Info</h5>
-        <ul>
-          <li>
-            Calories <b>XXX</b>
-          </li>
-          <li>
-            Carbs <b>XXXg</b>
-          </li>
-          <li>
-            Fiber <b>XXXg</b>
-          </li>
-          <li>
-            Protein <b>XXXg</b>
-          </li>
-          <li>
-            Sugar <b>XXXg</b>
-          </li>
-        </ul>
+      <div>
+        <div class="ingredients">
+          <h5>Ingredients</h5>
+          <h6>For 4 servings</h6>
+          <ol>
+            <li>
+              4 pcs chicken breast fillets
+            </li>
+            <li>
+              4 slices of bacon
+            </li>
+            <li>
+              1 dl of oil
+            </li>
+            <li>
+              2tbsp soy sauce
+            </li>
+            <li>
+              2 tbsp chili sauce
+            </li>
+            <li>
+              4 shallots
+            </li>
+            <li>
+              1tbsp salt
+            </li>
+            <li>
+              4 tbsp ground black pepper
+            </li>
+            <li>
+              2 cloves of garlic
+            </li>
+            <li>
+              0.5 mk strong paprika cream
+            </li>
+            <li>
+              1 bouillon cube
+            </li>
+          </ol>
+          <h5>Nutrition Info</h5>
+          <ul>
+            <li>
+              Calories <b>XXX</b>
+            </li>
+            <li>
+              Carbs <b>XXXg</b>
+            </li>
+            <li>
+              Fiber <b>XXXg</b>
+            </li>
+            <li>
+              Protein <b>XXXg</b>
+            </li>
+            <li>
+              Sugar <b>XXXg</b>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="info">
         <h5>
