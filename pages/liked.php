@@ -49,25 +49,11 @@
       </div>
     </div>
     <img class="svg" src="./../assets/headsmall.svg" alt="">
-    <div class="foodtype flex justifycenter">
-      <button>
-        Spanish
-      </button>
-      <button>
-        French
-      </button>
-      <button>
-        English
-      </button>
-      <button>
-        Australian
-      </button>
-    </div>
     <main>
       <section class="foodsection">
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
@@ -90,7 +76,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
@@ -113,7 +99,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
@@ -136,7 +122,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
@@ -159,7 +145,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
@@ -182,7 +168,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               &nbsp;
