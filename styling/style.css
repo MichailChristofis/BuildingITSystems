@@ -49,6 +49,9 @@
 .sitemap {
   text-decoration: none;
 }
+.bold {
+  font-weight: bold !important;
+}
 .bl {
   display: block;
 }
@@ -110,8 +113,11 @@
   width: 4vw;
   height: auto;
 }
+.boxname {
+  font-size: 1vw;
+}
 .profile-box {
-  position: fixed;
+  position: absolute;
   top: 1.6vw;
   right: 2vw;
   padding: 2.5vw 2vw;
@@ -240,6 +246,16 @@
   z-index: 1;
   border-radius: 0 0 2vw 2vw;
 }
+.foodimg a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
 .images {
   border-radius: 2vw;
   width: 100%;
@@ -250,7 +266,7 @@
 .duration {
   position: absolute;
   right: 1vw;
-  z-index: 2;
+  z-index: 3;
 }
 .like {
   width: 1.9vw;
@@ -469,6 +485,7 @@ hr {
 .fidiv {
   height: 10vw;
   border-right: 1px solid #3c3c3c;
+  position: relative;
 }
 .op {
   display: block;
@@ -481,6 +498,20 @@ hr {
   border-style: none;
   border-radius: 0.3vw;
   background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.easytransition {
+  position: absolute;
+  transform: translateY(0.1vw); /*0.1, 3.9*/
+  right: 0;
+  background-color: #f4f4f4;
+  padding: 1.1vw 0;
+  width: 100%;
+  z-index: 0;
+  border-radius: 0.3vw;
+  transition: 0.3s ease;
+  will-change: transform;
 }
 .op:hover {
   background-color: #f4f4f4;
@@ -601,4 +632,157 @@ th {
 .reclink {
   text-decoration: none;
   color: black;
+}
+.foodsection {
+  position: relative;
+}
+button.prev,
+button.next {
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+button.prev {
+  left: -7vw;
+}
+button.next {
+  right: -7vw;
+}
+.ph {
+  text-decoration: none;
+}
+@media (min-width: 1350px) {
+  .tit {
+    font-size: 60px;
+  }
+  .im {
+    width: 70px;
+  }
+  .search1 {
+    font-size: 60px;
+  }
+  .search2 {
+    font-size: 60px;
+  }
+  .searchdiv {
+    width: 700px;
+  }
+  .in {
+    font-size: 20px;
+    padding-left: 54px;
+    height: 60px;
+    width: 600px;
+  }
+  .in::placeholder {
+    font-size: 22px;
+  }
+  .searchdiv img {
+    width: 25px;
+  }
+  .magnifying {
+    left: 65px;
+  }
+  .shuffle {
+    right: 65px;
+  }
+  .popsearch button {
+    font-size: 16px;
+    padding: 13px 18px;
+  }
+  .foodtype button {
+    font-size: 16px;
+    padding: 13px 18px;
+    width: 160px;
+  }
+  .foodsection {
+    max-width: 1000px;
+  }
+  .like {
+    width: 30px;
+    top: 20px;
+  }
+  .element {
+    font-size: 25px;
+  }
+  .rating img {
+    width: 20px;
+  }
+  .dur {
+    font-size: 20px;
+  }
+  .duration {
+    bottom: 15px;
+  }
+  .duration img {
+    width: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .profile-box {
+    top: 1.4vw;
+    padding: 50px 40px;
+    border-radius: 20px;
+  }
+  .profile-in {
+    width: 100px;
+  }
+  .profile-in .edit {
+    bottom: 5px;
+    right: 10px;
+    width: 30px;
+  }
+  .profile-box span {
+    font-size: 15px;
+  }
+  .boxname {
+    font-size: 20px;
+  }
+  .profile-box a {
+    font-size: 20px;
+  }
+  .footerdiv {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .consi {
+    font-size: 22px;
+  }
+  .emsi {
+    font-size: 18px;
+  }
+  .log {
+    width: 100px;
+    height: 100px;
+  }
+  .socialim {
+    width: 30px;
+    height: 30px;
+  }
+  .emicon {
+    height: 15px;
+  }
+  .phicon {
+    height: 22px;
+    font-style: none;
+  }
+  .email,
+  .subject {
+    height: 26px;
+    max-width: 300px;
+  }
+  #mes {
+    height: 100px !important;
+  }
+  .meschar {
+    bottom: 0.4vw;
+    font-size: 15px;
+    right: 2.2vw;
+  }
+  .allrights {
+    font-size: 15px;
+  }
 }
