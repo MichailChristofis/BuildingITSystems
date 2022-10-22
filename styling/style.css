@@ -380,6 +380,8 @@ hr {
 
 ul, li {
   padding-left: 2vw;
+
+}
 .message {
   position: relative;
 }
@@ -631,3 +633,10 @@ th {
   text-decoration: none;
   color: black;
 }
+
+/* -------------- ABOUT US -------------------- */
+.herotitle {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
