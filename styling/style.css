@@ -282,6 +282,7 @@ h3 {
   font-size: 1.6vw;
 }
 .duration img {
+  margin-right: 0.4vw;
   width: 1.4vw;
 }
 .dur {
@@ -292,7 +293,8 @@ h3 {
   margin: 0.5vw 0;
 }
 .rating img {
-  width: 1.4vw;
+  width: 2vw;
+  padding-right: 0.5vw;
 }
 footer {
   padding: 4vw 8vw 4vw 8vw;
@@ -370,19 +372,23 @@ hr {
 .message {
   position: relative;
 }
-.message button {
+.numdiv {
   position: absolute;
-  right: 0.8vw;
+  right: 1vw;
   bottom: 0.3vw;
-  border: none;
+}
+.message button {
+  padding: 0 !important;
+  border: 0 none !important;
   background-color: transparent;
-  display: inline-block;
+  height: 1vw;
+}
+.message button img {
+  width: 1.3vw;
 }
 .meschar {
-  position: absolute;
-  bottom: 0.71vw;
-  right: 2.8vw;
   font-size: 0.9vw;
+  margin-right: 0.3vw;
 }
 .bannerimg {
   width: 100%;
@@ -405,6 +411,11 @@ hr {
 .rectitle {
   font-size: 1.8vw;
 }
+.starpar {
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+}
 .solstar {
   width: 1.6vw;
 }
@@ -416,9 +427,11 @@ hr {
 }
 .ingredients li {
   font-size: 1.3vw;
+  list-style-position: inside;
 }
 .info li {
   font-size: 1.3vw;
+  list-style-position: inside;
 }
 .info p {
   margin-bottom: 1vw;
@@ -475,7 +488,6 @@ hr {
 }
 .ing ol {
   margin-bottom: 5vw;
-  padding-left: 1.2vw;
 }
 .ing ul {
   list-style: none;
@@ -527,10 +539,10 @@ hr {
 .easytransition {
   position: absolute;
   transform: translateY(-0.1vw); /*-0.1, 3.7*/
-  right: 0;
+  right: 1vw;
   background-color: #f4f4f4;
   padding: 1.3vw 0;
-  width: 100%;
+  width: 90%;
   z-index: 0;
   border-radius: 0.3vw;
   transition: 0.3s ease;
@@ -685,7 +697,213 @@ button.next {
 .credsubmit button {
   font-size: 1vw;
 }
-@media (min-width: 1350px) {
+.likedrecipes {
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 3vw;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+}
+.message img {
+  width: 1.3vw;
+}
+.downarr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4vw;
+  width: 5vw;
+}
+@media (max-width: 1050px) {
+  .foodtype button {
+    font-size: 1.6vw;
+    width: 13vw;
+  }
+  .foodsection {
+    grid-template-columns: repeat(2, 43%);
+    max-width: 50vw;
+  }
+  .duration {
+    bottom: 1.5vw;
+  }
+  .prev {
+    display: none !important;
+  }
+  .next {
+    display: none !important;
+  }
+}
+@media (min-width: 1050px) {
+  .downarr {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .foodsection {
+    max-width: 70vw;
+  }
+  .popsearch button {
+    font-size: 2vw;
+  }
+  .im {
+    width: 7vw;
+  }
+  .tit {
+    font-size: 4.5vw;
+  }
+  .search1,
+  .search2 {
+    font-size: 4.5vw;
+  }
+  .searchdiv {
+    width: 50vw;
+  }
+  .in {
+    width: 50vw;
+    height: 5vw;
+    border-radius: 3vw;
+    padding-left: 6vw;
+  }
+  .in::placeholder {
+    font-size: 2vw;
+  }
+  .searchdiv img {
+    width: 2.5vw;
+  }
+  .foodtype button {
+    font-size: 2.5vw;
+    width: 16vw;
+    border-radius: 5vw;
+  }
+  .profile-box {
+    top: 1.1vw;
+  }
+  .profile-in {
+    display: none;
+  }
+  .usr {
+    display: none !important;
+  }
+  .boxname {
+    font-size: 1.6vw;
+  }
+  .profile-box a {
+    font-size: 1.8vw;
+  }
+  .like {
+    width: 3.8vw;
+  }
+  .duration img {
+    width: 2.5vw;
+  }
+  .dur {
+    font-size: 2.5vw;
+  }
+  h3 {
+    font-size: 2.5vw;
+  }
+  .rating img {
+    width: 3vw;
+  }
+  .starpar {
+    display: none;
+  }
+  .nutrients {
+    display: none;
+  }
+  .rectitle {
+    font-size: 4vw;
+    width: 100%;
+    text-align: center;
+  }
+  .titlepar {
+    width: 100%;
+  }
+  .nut {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #a6a6a6;
+    border-radius: 5vw;
+    padding: 2vw 1vw 2vw 3vw;
+  }
+  .nudiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nudiv img {
+    display: block;
+    width: 5vw;
+    padding-right: 1vw;
+  }
+  .nudiv span {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: white;
+    padding-right: 2vw;
+  }
+  .wstarpar {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+  }
+  .wstarpar img {
+    display: block;
+    width: 4vw;
+    padding-right: 1vw;
+  }
+  .ing {
+    display: none;
+  }
+  .ingeson {
+    padding: 5vw 10vw;
+  }
+  .ingr h5,
+  .meth h5,
+  .inf h5 {
+    font-size: 5vw;
+  }
+  .ingr h6 {
+    font-size: 4vw;
+  }
+  .ingr li {
+    font-size: 3vw;
+    list-style-position: inside;
+  }
+  .meth li {
+    font-size: 3vw;
+    list-style-type: none;
+  }
+  .inf {
+    padding: 5vw 10vw;
+  }
+  .inf img {
+    width: 100%;
+    border-radius: 3vw;
+    margin-top: 3vw;
+    margin-bottom: 6vw;
+  }
+  .inf li {
+    list-style-type: none;
+  }
+  .inf li p {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 400px) {
+  .nut {
+    display: none;
+  }
+  .inge {
+    display: none;
+  }
+}
+@media (min-width: 1500px) {
+  .downarr {
+    width: 70px;
+  }
   .tit {
     font-size: 60px;
   }
@@ -739,7 +957,8 @@ button.next {
     font-size: 25px;
   }
   .rating img {
-    width: 20px;
+    width: 30px;
+    padding-right: 10px;
   }
   .dur {
     font-size: 20px;
@@ -829,10 +1048,10 @@ button.next {
   .ingredients li {
     font-size: 25px;
   }
-  .ing ol {
-    padding-left: 25px;
-  }
   .info li {
     font-size: 27px;
+  }
+  .likedrecipes {
+    font-size: 45px;
   }
 }

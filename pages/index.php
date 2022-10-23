@@ -8,14 +8,14 @@
   <body>
     <div class="to">
       <div class="flex spacebetween aligncenter">
-        <span class="tit">RecipeWise</span>
+          <a href="./index.php" class="nodec"><span class="tit">RecipeWise</span></a>
         <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
         <div class="profile-box profempty">
           <div class="profile-in">
             <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
             <img class="im" src="./../assets/prof.png" alt="profile image">
           </div>
-          <span>@jennifer.daniels</span>
+          <span class="usr">@jennifer.daniels</span>
           <h5 class="boxname">Jennifer Daniels</h5>
           <div class="profilelinks">
             <a href="./profile.php">Account</a>
@@ -70,14 +70,13 @@
             <img class="like empty" src="./../assets/heart.png" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
-              &nbsp;
               <span class="dur">40 min</span>
             </div>
-            <img class="images" src="./../assets/burger.png" alt="burger image">
+            <a href=""><img class="images" src="./../assets/burger.png" alt="burger image"></a>
           </div>
           <div class="food-text">
             <h3>
-              The Breakfast Burger
+              <a class="reclink" href="">The Breakfast Burger</a>
             </h3>
           </div>
           <div class="rating">
@@ -93,14 +92,13 @@
             <img class="like empty" src="./../assets/heart.png" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
-              &nbsp;
               <span class="dur">40 min</span>
             </div>
-            <img class="images" src="./../assets/meat.png" alt="burger image">
+            <a href=""><img class="images" src="./../assets/meat.png" alt="burger image"></a>
           </div>
           <div class="food-text">
             <h3>
-              Flank Steak
+              <a class="reclink" href="">Flank Steak</a>
             </h3>
           </div>
           <div class="rating">
@@ -116,14 +114,13 @@
             <img class="like empty" src="./../assets/heart.png" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
-              &nbsp;
               <span class="dur">40 min</span>
             </div>
-            <img class="images" src="./../assets/steak.png" alt="burger image">
+            <a href=""><img class="images" src="./../assets/steak.png" alt="burger image"></a>
           </div>
           <div class="food-text">
             <h3>
-              Steak From Heaven
+              <a class="reclink" href="">Steak From Heaven</a>
             </h3>
           </div>
           <div class="rating">
@@ -139,14 +136,13 @@
             <img class="like empty" src="./../assets/heart.png" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
-              &nbsp;
               <span class="dur">40 min</span>
             </div>
-            <img class="images" src="./../assets/sushi.png" alt="burger image">
+            <a href=""><img class="images" src="./../assets/sushi.png" alt="burger image"></a>
           </div>
           <div class="food-text">
             <h3>
-              Salmon Nigiri
+              <a class="reclink" href="">Salmon Nigiri</a>
             </h3>
           </div>
           <div class="rating">
@@ -162,14 +158,13 @@
             <img class="like empty" src="./../assets/heart.png" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
-              &nbsp;
               <span class="dur">40 min</span>
             </div>
-            <img class="images" src="./../assets/rice.png" alt="burger image">
+            <a href=""><img class="images" src="./../assets/rice.png" alt="burger image"></a>
           </div>
           <div class="food-text">
             <h3>
-              Fried Rice
+              <a class="reclink" href="">Fried Rice</a>
             </h3>
           </div>
           <div class="rating">
@@ -185,7 +180,6 @@
             <img class="like empty" src="./../assets/heart.png" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
-              &nbsp;
               <span class="dur">40 min</span>
             </div>
             <a href="./recipe.php"><img class="images" src="./../assets/chicken.png" alt="burger image"></a>
@@ -222,15 +216,17 @@
           <div class="message">
             <span class="bl colw popno mabo emsi">Message:</span>
             <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
-            <span class="meschar">
-              0/256
-            </span>
-            <button type="submit">
-              <img src="./../assets/plane.svg" alt="plane image">
-            </button>
+            <div class="numdiv">
+              <span class="meschar">
+                0/256
+              </span>
+              <button type="submit">
+                <img src="./../assets/plane.svg" alt="plane image">
+              </button>
+            </div>
           </div>
         </div>
-        <div>
+        <div class="sitemap">
           <span class="colw popbo consi">Sitemap</span>
           <div>
             <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
@@ -243,11 +239,11 @@
           <img src="./../assets/logo.png" class="log" alt="Logo">
           <div class="flex aligncenter">
             <img src="./../assets/email.png" class="emicon" alt="email icon">
-            <a href="mailto:support@recipewise.com"><span class="colw popno emsi emtext">support@recipewise.com</span></a>
+            <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
           </div>
           <div class="flex aligncenter contacttop">
             <img src="./../assets/phone.png" class="phicon" alt="phone icon">
-            <a href="tel:1300566466" class="ph"><span class="colw popno emsi">1300 566 466</span></a>
+            <a class="colw popno emsi ph" href="tel:1300566466">1300 566 466</a>
           </div>
           <div class="socialdiv flex spacebetween">
             <img class="socialim" src="./../assets/facebook.png" alt="Facebook image">

@@ -8,15 +8,15 @@
   <body>
     <div class="to">
       <div class="flex spacebetween aligncenter">
-        <span class="tit">RecipeWise</span>
+          <a href="./index.php" class="nodec"><span class="tit">RecipeWise</span></a>
         <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
         <div class="profile-box profempty">
           <div class="profile-in">
             <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
             <img class="im" src="./../assets/prof.png" alt="profile image">
           </div>
-          <span>@jennifer.daniels</span>
-          <h5>Jennifer Daniels</h5>
+          <span class="usr">@jennifer.daniels</span>
+          <h5 class="boxname">Jennifer Daniels</h5>
           <div class="profilelinks">
             <a href="./profile.php">Account</a>
             <a href="./liked.php">Liked Recipes</a>
@@ -173,11 +173,11 @@
           <img src="./../assets/logo.png" class="log" alt="Logo">
           <div class="flex aligncenter">
             <img src="./../assets/email.png" class="emicon" alt="email icon">
-            <a href="mailto:support@recipewise.com"><span class="colw popno emsi emtext">support@recipewise.com</span></a>
+            <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
           </div>
           <div class="flex aligncenter contacttop">
             <img src="./../assets/phone.png" class="phicon" alt="phone icon">
-            <a href="tel:1300566466" class="ph"><span class="colw popno emsi">1300 566 466</span></a>
+            <a class="colw popno emsi ph" href="tel:1300566466">1300 566 466</a>
           </div>
           <div class="socialdiv flex spacebetween">
             <img class="socialim" src="./../assets/facebook.png" alt="Facebook image">
