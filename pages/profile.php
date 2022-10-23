@@ -18,8 +18,8 @@
           <span>@jennifer.daniels</span>
           <h5>Jennifer Daniels</h5>
           <div class="profilelinks">
-            <a href="">Account</a>
-            <a href="">Liked Recipes</a>
+            <a href="./profile.php">Account</a>
+            <a href="./liked.php">Liked Recipes</a>
             <a href="">Log Out</a>
           </div>
         </div>

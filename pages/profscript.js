@@ -13,7 +13,7 @@ nu1.addEventListener("click", () => {
   no4.classList.remove("nodisplay");
   no2.classList.add("nodisplay");
   no3.classList.add("nodisplay");
-  easytransition.style.transform = "translateY(0.1vw)";
+  easytransition.style.transform = "translateY(-0.1vw)";
   removeBold();
   nu1.classList.toggle("bold");
 });
@@ -22,7 +22,7 @@ nu2.addEventListener("click", () => {
   no4.classList.add("nodisplay");
   no2.classList.remove("nodisplay");
   no3.classList.add("nodisplay");
-  easytransition.style.transform = "translateY(3.9vw)";
+  easytransition.style.transform = "translateY(3.7vw)";
   removeBold();
   nu2.classList.toggle("bold");
 });
@@ -31,7 +31,7 @@ nu3.addEventListener("click", () => {
   no4.classList.add("nodisplay");
   no2.classList.add("nodisplay");
   no3.classList.remove("nodisplay");
-  easytransition.style.transform = "translateY(7.7vw)";
+  easytransition.style.transform = "translateY(7.5vw)";
   removeBold();
   nu3.classList.toggle("bold");
 });

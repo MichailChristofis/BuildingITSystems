@@ -19,7 +19,7 @@
           <h5>Jennifer Daniels</h5>
           <div class="profilelinks">
             <a href="./profile.php">Account</a>
-            <a href="">Liked Recipes</a>
+            <a href="./liked.php">Liked Recipes</a>
             <a href="">Log Out</a>
           </div>
         </div>

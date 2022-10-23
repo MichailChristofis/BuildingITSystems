@@ -526,10 +526,10 @@ hr {
 }
 .easytransition {
   position: absolute;
-  transform: translateY(0.1vw); /*0.1, 3.9*/
+  transform: translateY(-0.1vw); /*-0.1, 3.7*/
   right: 0;
   background-color: #f4f4f4;
-  padding: 1.1vw 0;
+  padding: 1.3vw 0;
   width: 100%;
   z-index: 0;
   border-radius: 0.3vw;
@@ -602,6 +602,7 @@ hr {
   border-radius: 2vw;
   border-style: none;
   margin-top: 1vw;
+  font-size: 1vw;
 }
 table {
   margin-left: auto;
@@ -636,6 +637,7 @@ th {
   margin-bottom: 1.2vw;
   font-size: 1.2vw;
   width: 22vw;
+  border-radius: 0.6vw;
 }
 .creds fieldset {
   border-style: none;
@@ -679,6 +681,9 @@ button.next {
 }
 .nodec {
   text-decoration: none;
+}
+.credsubmit button {
+  font-size: 1vw;
 }
 @media (min-width: 1350px) {
   .tit {
@@ -750,7 +755,7 @@ button.next {
   }
   .profile-box {
     top: 1.4vw;
-    padding: 50px 40px;
+    padding: 30px 40px;
     border-radius: 20px;
   }
   .profile-in {
