@@ -402,6 +402,30 @@ hr {
   max-height: 70%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.62%, #000000 92.01%);
 }
+.rectitle {
+  font-size: 1.8vw;
+}
+.solstar {
+  width: 1.6vw;
+}
+.nutdiv img {
+  width: 1.3vw;
+}
+.nutdiv span {
+  font-size: 1.3vw;
+}
+.ingredients li {
+  font-size: 1.3vw;
+}
+.info li {
+  font-size: 1.3vw;
+}
+.info p {
+  margin-bottom: 1vw;
+}
+.info img {
+  margin-bottom: 2vw;
+}
 .to2 {
   position: absolute;
   top: 0;
@@ -441,8 +465,7 @@ hr {
   display: grid;
   grid-template-columns: 30% 65%;
   margin: 5vw auto;
-  padding: 2.3vw;
-  max-width: 97vw;
+  max-width: min(97vw, 1700px);
 }
 .ing h5 {
   font-size: 2vw;
@@ -784,5 +807,24 @@ button.next {
   }
   .allrights {
     font-size: 15px;
+  }
+  .bannerimg {
+    max-height: 1300px;
+    object-fit: cover;
+  }
+  .ing h5 {
+    font-size: 40px;
+  }
+  .ing h6 {
+    font-size: 30px;
+  }
+  .ingredients li {
+    font-size: 25px;
+  }
+  .ing ol {
+    padding-left: 25px;
+  }
+  .info li {
+    font-size: 27px;
   }
 }
