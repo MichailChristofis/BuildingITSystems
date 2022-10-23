@@ -233,10 +233,10 @@
         <div>
           <span class="colw popbo consi">Sitemap</span>
           <div>
-            <span class="bl colw popno emsi mato mabo">Home</span>
-            <span class="bl colw popno emsi mabo">My Profile</span>
-            <span class="bl colw popno emsi mabo">About Us</span>
-            <span class="bl colw popno emsi mabo">Privacy Policy</span>
+            <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
+            <a href="profile.php" class="nodec bl colw popno emsi mabo">My Profile</a>
+            <a href="" class="nodec bl colw popno emsi mabo">About Us</a>
+            <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
           </div>
         </div>
         <div>

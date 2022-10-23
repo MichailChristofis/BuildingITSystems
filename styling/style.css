@@ -677,6 +677,9 @@ button.next {
 .ph {
   text-decoration: none;
 }
+.nodec {
+  text-decoration: none;
+}
 @media (min-width: 1350px) {
   .tit {
     font-size: 60px;
