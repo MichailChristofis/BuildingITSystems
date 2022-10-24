@@ -1,0 +1,224 @@
+body {
+    background-color: #FA003F;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* RecipeWise heading is always in h1 on Sign in / Sign up pages. */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1.5rem 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+a {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Centering the content */
+.centre {
+    margin: auto;
+    width: 50%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.alignLeft {
+    display: inline-block;
+    text-align: left;
+}
+
+/* Styling the text fields */
+input[type=text] {
+    margin: 6px;
+    border-radius: 3rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 200px;
+    height: 35px;
+    padding: 0px 20px;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+/* Link to sign up page */
+.signUpDiv {
+    padding: 20px 0px 30px 0px;
+}
+
+.signUpLink {
+    text-decoration: none;
+    color: white;
+}
+
+.signUpLink:hover {
+    text-decoration: underline;
+}
+
+/* Styling the button */
+button {
+    display: inline-block;
+    border-radius: 3rem;
+    background-color: #FA5D1F;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: .8rem;
+    height: 35px;
+    padding: 0px 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  button:hover span {
+    padding-right: 25px;
+  }
+
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+/* Media queries */
+/* > Mobile */
+@media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    h1 {
+        font-size: 1.8rem;
+        padding: .8rem 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    label {
+        font-size: .8rem;
+    }
+    
+    a {
+        font-size: .8rem;
+    }
+
+    input[type=text] {
+        width: 170px;
+        height: 30px;
+        padding: 0px 15px;
+    }
+
+    button {
+        height: 30px;
+        font-size: .7rem;
+    }
+
+    .signUpDiv {
+        padding: 15px 0px 20px 0px;
+    }
+}
+
+/* > Tablet and small desktop */
+@media only screen and (min-device-width: 812px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* > Large desktop and TV */
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    h1 {
+        font-size: 2.8rem;
+        padding: 1.5rem 4rem;
+    }
+    
+    h2 {
+        font-size: 2.3rem;
+    }
+    
+    label {
+        font-size: 1.3rem;
+    }
+    
+    a {
+        font-size: 1.1rem;
+    }
+
+    input[type=text] {
+        width: 250px;
+        height: 40px;
+        padding: 0px 15px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .signUpDiv {
+        padding: 18px 0px 23px 0px;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+    h1 {
+        font-size: 2.8rem;
+        padding: 1.5rem 4rem;
+    }
+    
+    h2 {
+        font-size: 2.3rem;
+    }
+    
+    label {
+        font-size: 1.3rem;
+    }
+    
+    a {
+        font-size: 1.1rem;
+    }
+
+    input[type=text] {
+        width: 250px;
+        height: 40px;
+        padding: 0px 15px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .signUpDiv {
+        padding: 18px 0px 23px 0px;
+    }
+}
