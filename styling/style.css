@@ -49,6 +49,9 @@
 .sitemap {
   text-decoration: none;
 }
+.bold {
+  font-weight: bold !important;
+}
 .bl {
   display: block;
 }
@@ -110,8 +113,11 @@
   width: 4vw;
   height: auto;
 }
+.boxname {
+  font-size: 1vw;
+}
 .profile-box {
-  position: fixed;
+  position: absolute;
   top: 1.6vw;
   right: 2vw;
   padding: 2.5vw 2vw;
@@ -240,6 +246,16 @@
   z-index: 1;
   border-radius: 0 0 2vw 2vw;
 }
+.foodimg a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
 .images {
   border-radius: 2vw;
   width: 100%;
@@ -250,7 +266,7 @@
 .duration {
   position: absolute;
   right: 1vw;
-  z-index: 2;
+  z-index: 3;
 }
 .like {
   width: 1.9vw;
@@ -266,6 +282,7 @@ h3 {
   font-size: 1.6vw;
 }
 .duration img {
+  margin-right: 0.4vw;
   width: 1.4vw;
 }
 .dur {
@@ -276,7 +293,8 @@ h3 {
   margin: 0.5vw 0;
 }
 .rating img {
-  width: 1.4vw;
+  width: 2vw;
+  padding-right: 0.5vw;
 }
 footer {
   padding: 4vw 8vw 4vw 8vw;
@@ -385,19 +403,23 @@ ul, li {
 .message {
   position: relative;
 }
-.message button {
+.numdiv {
   position: absolute;
-  right: 0.8vw;
+  right: 1vw;
   bottom: 0.3vw;
-  border: none;
+}
+.message button {
+  padding: 0 !important;
+  border: 0 none !important;
   background-color: transparent;
-  display: inline-block;
+  height: 1vw;
+}
+.message button img {
+  width: 1.3vw;
 }
 .meschar {
-  position: absolute;
-  bottom: 0.71vw;
-  right: 2.8vw;
   font-size: 0.9vw;
+  margin-right: 0.3vw;
 }
 .bannerimg {
   width: 100%;
@@ -416,6 +438,37 @@ ul, li {
   display: block;
   max-height: 70%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.62%, #000000 92.01%);
+}
+.rectitle {
+  font-size: 1.8vw;
+}
+.starpar {
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+}
+.solstar {
+  width: 1.6vw;
+}
+.nutdiv img {
+  width: 1.3vw;
+}
+.nutdiv span {
+  font-size: 1.3vw;
+}
+.ingredients li {
+  font-size: 1.3vw;
+  list-style-position: inside;
+}
+.info li {
+  font-size: 1.3vw;
+  list-style-position: inside;
+}
+.info p {
+  margin-bottom: 1vw;
+}
+.info img {
+  margin-bottom: 2vw;
 }
 .to2 {
   position: absolute;
@@ -456,8 +509,7 @@ ul, li {
   display: grid;
   grid-template-columns: 30% 65%;
   margin: 5vw auto;
-  padding: 2.3vw;
-  max-width: 97vw;
+  max-width: min(97vw, 1700px);
 }
 .ing h5 {
   font-size: 2vw;
@@ -467,7 +519,6 @@ ul, li {
 }
 .ing ol {
   margin-bottom: 5vw;
-  padding-left: 1.2vw;
 }
 .ing ul {
   list-style: none;
@@ -500,6 +551,7 @@ ul, li {
 .fidiv {
   height: 10vw;
   border-right: 1px solid #3c3c3c;
+  position: relative;
 }
 .op {
   display: block;
@@ -512,6 +564,20 @@ ul, li {
   border-style: none;
   border-radius: 0.3vw;
   background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.easytransition {
+  position: absolute;
+  transform: translateY(-0.1vw); /*-0.1, 3.7*/
+  right: 1vw;
+  background-color: #f4f4f4;
+  padding: 1.3vw 0;
+  width: 90%;
+  z-index: 0;
+  border-radius: 0.3vw;
+  transition: 0.3s ease;
+  will-change: transform;
 }
 .op:hover {
   background-color: #f4f4f4;
@@ -579,6 +645,7 @@ ul, li {
   border-radius: 2vw;
   border-style: none;
   margin-top: 1vw;
+  font-size: 1vw;
 }
 table {
   margin-left: auto;
@@ -613,6 +680,7 @@ th {
   margin-bottom: 1.2vw;
   font-size: 1.2vw;
   width: 22vw;
+  border-radius: 0.6vw;
 }
 .creds fieldset {
   border-style: none;
@@ -632,6 +700,391 @@ th {
 .reclink {
   text-decoration: none;
   color: black;
+}
+.foodsection {
+  position: relative;
+}
+button.prev,
+button.next {
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+button.prev {
+  left: -7vw;
+}
+button.next {
+  right: -7vw;
+}
+.ph {
+  text-decoration: none;
+}
+.nodec {
+  text-decoration: none;
+}
+.credsubmit button {
+  font-size: 1vw;
+}
+.likedrecipes {
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 3vw;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+}
+.message img {
+  width: 1.3vw;
+}
+.downarr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4vw;
+  width: 5vw;
+}
+@media (max-width: 1050px) {
+  .foodtype button {
+    font-size: 1.6vw;
+    width: 13vw;
+  }
+  .foodsection {
+    grid-template-columns: repeat(2, 43%);
+    max-width: 50vw;
+  }
+  .duration {
+    bottom: 1.5vw;
+  }
+  .prev {
+    display: none !important;
+  }
+  .next {
+    display: none !important;
+  }
+}
+@media (min-width: 1050px) {
+  .downarr {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .foodsection {
+    max-width: 70vw;
+  }
+  .popsearch button {
+    font-size: 2vw;
+  }
+  .im {
+    width: 7vw;
+  }
+  .tit {
+    font-size: 4.5vw;
+  }
+  .search1,
+  .search2 {
+    font-size: 4.5vw;
+  }
+  .searchdiv {
+    width: 50vw;
+  }
+  .in {
+    width: 50vw;
+    height: 5vw;
+    border-radius: 3vw;
+    padding-left: 6vw;
+  }
+  .in::placeholder {
+    font-size: 2vw;
+  }
+  .searchdiv img {
+    width: 2.5vw;
+  }
+  .foodtype button {
+    font-size: 2.5vw;
+    width: 16vw;
+    border-radius: 5vw;
+  }
+  .profile-box {
+    top: 1.1vw;
+  }
+  .profile-in {
+    display: none;
+  }
+  .usr {
+    display: none !important;
+  }
+  .boxname {
+    font-size: 1.6vw;
+  }
+  .profile-box a {
+    font-size: 1.8vw;
+  }
+  .like {
+    width: 3.8vw;
+  }
+  .duration img {
+    width: 2.5vw;
+  }
+  .dur {
+    font-size: 2.5vw;
+  }
+  h3 {
+    font-size: 2.5vw;
+  }
+  .rating img {
+    width: 3vw;
+  }
+  .starpar {
+    display: none;
+  }
+  .nutrients {
+    display: none;
+  }
+  .rectitle {
+    font-size: 4vw;
+    width: 100%;
+    text-align: center;
+  }
+  .titlepar {
+    width: 100%;
+  }
+  .nut {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #a6a6a6;
+    border-radius: 5vw;
+    padding: 2vw 1vw 2vw 3vw;
+  }
+  .nudiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nudiv img {
+    display: block;
+    width: 5vw;
+    padding-right: 1vw;
+  }
+  .nudiv span {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: white;
+    padding-right: 2vw;
+  }
+  .wstarpar {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+  }
+  .wstarpar img {
+    display: block;
+    width: 4vw;
+    padding-right: 1vw;
+  }
+  .ing {
+    display: none;
+  }
+  .ingeson {
+    padding: 5vw 10vw;
+  }
+  .ingr h5,
+  .meth h5,
+  .inf h5 {
+    font-size: 5vw;
+  }
+  .ingr h6 {
+    font-size: 4vw;
+  }
+  .ingr li {
+    font-size: 3vw;
+    list-style-position: inside;
+  }
+  .meth li {
+    font-size: 3vw;
+    list-style-type: none;
+  }
+  .inf {
+    padding: 5vw 10vw;
+  }
+  .inf img {
+    width: 100%;
+    border-radius: 3vw;
+    margin-top: 3vw;
+    margin-bottom: 6vw;
+  }
+  .inf li {
+    list-style-type: none;
+  }
+  .inf li p {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 400px) {
+  .nut {
+    display: none;
+  }
+  .inge {
+    display: none;
+  }
+}
+@media (min-width: 1500px) {
+  .downarr {
+    width: 70px;
+  }
+  .tit {
+    font-size: 60px;
+  }
+  .im {
+    width: 70px;
+  }
+  .search1 {
+    font-size: 60px;
+  }
+  .search2 {
+    font-size: 60px;
+  }
+  .searchdiv {
+    width: 700px;
+  }
+  .in {
+    font-size: 20px;
+    padding-left: 54px;
+    height: 60px;
+    width: 600px;
+  }
+  .in::placeholder {
+    font-size: 22px;
+  }
+  .searchdiv img {
+    width: 25px;
+  }
+  .magnifying {
+    left: 65px;
+  }
+  .shuffle {
+    right: 65px;
+  }
+  .popsearch button {
+    font-size: 16px;
+    padding: 13px 18px;
+  }
+  .foodtype button {
+    font-size: 16px;
+    padding: 13px 18px;
+    width: 160px;
+  }
+  .foodsection {
+    max-width: 1000px;
+  }
+  .like {
+    width: 30px;
+    top: 20px;
+  }
+  .element {
+    font-size: 25px;
+  }
+  .rating img {
+    width: 30px;
+    padding-right: 10px;
+  }
+  .dur {
+    font-size: 20px;
+  }
+  .duration {
+    bottom: 15px;
+  }
+  .duration img {
+    width: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .profile-box {
+    top: 1.4vw;
+    padding: 30px 40px;
+    border-radius: 20px;
+  }
+  .profile-in {
+    width: 100px;
+  }
+  .profile-in .edit {
+    bottom: 5px;
+    right: 10px;
+    width: 30px;
+  }
+  .profile-box span {
+    font-size: 15px;
+  }
+  .boxname {
+    font-size: 20px;
+  }
+  .profile-box a {
+    font-size: 20px;
+  }
+  .footerdiv {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .consi {
+    font-size: 22px;
+  }
+  .emsi {
+    font-size: 18px;
+  }
+  .log {
+    width: 100px;
+    height: 100px;
+  }
+  .socialim {
+    width: 30px;
+    height: 30px;
+  }
+  .emicon {
+    height: 15px;
+  }
+  .phicon {
+    height: 22px;
+    font-style: none;
+  }
+  .email,
+  .subject {
+    height: 26px;
+    max-width: 300px;
+  }
+  #mes {
+    height: 100px !important;
+  }
+  .meschar {
+    bottom: 0.4vw;
+    font-size: 15px;
+    right: 2.2vw;
+  }
+  .allrights {
+    font-size: 15px;
+  }
+  .bannerimg {
+    max-height: 1300px;
+    object-fit: cover;
+  }
+  .ing h5 {
+    font-size: 40px;
+  }
+  .ing h6 {
+    font-size: 30px;
+  }
+  .ingredients li {
+    font-size: 25px;
+  }
+  .info li {
+    font-size: 27px;
+  }
+  .likedrecipes {
+    font-size: 45px;
+  }
 }
 
 /* -------------- ABOUT US -------------------- */
