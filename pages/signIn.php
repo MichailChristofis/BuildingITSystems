@@ -20,11 +20,12 @@
 
         <!-- Labels and fields -->
         <div class="alignLeft">
-            <form>
+            <form id="myform" action="./check.php" method="POST">
                 <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" pattern="[a-z]"><br>
+                <input type="text" id="email" name="email"><br>
                 <label for="password">Password:</label><br>
-                <input type="text" id="password" name="password" pattern="[a-z]"><br>
+                <input type="text" id="password" name="password" ><br>
+                <input type="hidden" id="c" name="c">
             </form>
         </div>
         
@@ -32,7 +33,7 @@
         <div class="signUpDiv"><a class="signUpLink" href="signUp.html">New? Create an account!</a><br></div>
 
         <!-- Submit button -->
-        <button><span>Sign In</spa></button>
+        <button type="submit" form="myform"><span>Sign In</spa></button>
     </div>
 </body>
 <script src="./login.js"></script>
