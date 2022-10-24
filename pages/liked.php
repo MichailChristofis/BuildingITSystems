@@ -49,25 +49,14 @@
       </div>
     </div>
     <img class="svg" src="./../assets/headsmall.svg" alt="">
-    <div class="foodtype flex justifycenter">
-      <button>
-        Spanish
-      </button>
-      <button>
-        French
-      </button>
-      <button>
-        English
-      </button>
-      <button>
-        Australian
-      </button>
-    </div>
     <main>
+      <h1 class="likedrecipes">Liked Recipes</h1>
       <section class="foodsection">
+        <button class="prev"><img src="./../assets/right.svg" alt="right chevron"></button>
+        <button class="next"><img src="./../assets/left.svg" alt="left chevron"></button>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               <span class="dur">40 min</span>
@@ -89,7 +78,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               <span class="dur">40 min</span>
@@ -111,7 +100,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               <span class="dur">40 min</span>
@@ -133,7 +122,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               <span class="dur">40 min</span>
@@ -155,7 +144,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               <span class="dur">40 min</span>
@@ -177,7 +166,7 @@
         </div>
         <div>
           <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <img class="like full" src="./../assets/fullheart.svg" alt="heart image">
             <div class="duration">
               <img src="./../assets/clock.svg" alt="clock image">
               <span class="dur">40 min</span>
@@ -198,6 +187,7 @@
           </div>
         </div>
       </section>
+      <img class="downarr" src="./../assets/down.svg" alt="down arrow">
     </main>
   </body>
   <footer>
@@ -216,17 +206,15 @@
           <div class="message">
             <span class="bl colw popno mabo emsi">Message:</span>
             <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
-            <div class="numdiv">
-              <span class="meschar">
-                0/256
-              </span>
-              <button type="submit">
-                <img src="./../assets/plane.svg" alt="plane image">
-              </button>
-            </div>
+            <span class="meschar">
+              0/256
+            </span>
+            <button type="submit">
+              <img src="./../assets/plane.svg" alt="plane image">
+            </button>
           </div>
         </div>
-        <div class="sitemap">
+        <div>
           <span class="colw popbo consi">Sitemap</span>
           <div>
             <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>

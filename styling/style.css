@@ -22,11 +22,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "DM Sans";
+  font-family: "Poppins";
 }
 .to {
   padding: 1vw 2vw 0vw 2vw;
   background-color: #fa003f;
+}
+.nodisplay {
+  display: none !important;
 }
 .flex {
   display: flex;
@@ -42,6 +45,12 @@
 }
 .posab {
   position: absolute;
+}
+.sitemap {
+  text-decoration: none;
+}
+.bold {
+  font-weight: bold !important;
 }
 .bl {
   display: block;
@@ -75,10 +84,62 @@
   font-weight: bolder;
   font-family: "Poppins";
 }
+.profempty {
+  display: none;
+}
+.profshow {
+  display: block !important;
+}
+.profile-in {
+  width: 4vw;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+.profile-in .edit {
+  position: absolute;
+  bottom: 0.3vw;
+  right: -0.4vw;
+  width: 1.6vw;
+}
+.svg {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
 .im {
   border-radius: 50%;
   width: 4vw;
   height: auto;
+}
+.boxname {
+  font-size: 1vw;
+}
+.profile-box {
+  position: absolute;
+  top: 1.6vw;
+  right: 2vw;
+  padding: 2.5vw 2vw;
+  background-color: #feefe5;
+  text-align: center;
+  border-radius: 1vw;
+  z-index: 10;
+}
+.profile-box img {
+  display: inline-block;
+}
+.profile-box span {
+  display: block;
+  margin: 0.5vw 0;
+  font-size: 1vw;
+}
+.profile-box a {
+  display: block;
+  color: black;
+  font-size: 1.2vw;
+  text-decoration: none;
+  margin: 0.9vw 0;
 }
 .search {
   display: flex;
@@ -96,11 +157,144 @@
   font-weight: bold;
   font-family: "Poppins";
 }
+.searchdiv {
+  width: 38vw;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 1.3vw;
+}
 .in {
+  font-size: 1.2vw;
+  padding-left: 4vw;
   border-radius: 2vw;
   width: 38vw;
   height: 3.5vw;
-  margin-top: 1.3vw;
+  border: none;
+}
+.in::placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  color: black;
+  font-size: 1.1vw;
+}
+.searchdiv img {
+  width: 1.8vw;
+}
+.magnifying {
+  position: absolute;
+  left: 1.3vw;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.shuffle {
+  position: absolute;
+  right: 1.3vw;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.popsearch,
+.foodtype {
+  margin-top: 1.6vw;
+  gap: 1.6vw;
+}
+.popsearch button {
+  display: inline-block;
+  padding: 0.5vw 1vw;
+  border: none;
+  font-size: 1.2vw;
+  border-radius: 3vw;
+}
+.foodtype button {
+  font-size: 1.2vw;
+  text-align: center;
+  display: inline-block;
+  width: 9vw;
+  padding: 0.5vw 1vw;
+  border-radius: 2vw;
+  border: none;
+  background-color: #f5f5f5;
+  transition: 0.3s ease;
+}
+.foodtype button:hover,
+.foodtype button.active {
+  font-weight: bold;
+  background-color: grey;
+  color: white;
+}
+.foodsection {
+  display: grid;
+  grid-template-columns: repeat(3, 28%);
+  justify-content: space-between;
+  row-gap: 5vw;
+  max-width: 70vw;
+  margin: 3.5vw auto;
+  text-align: center;
+}
+.foodimg {
+  position: relative;
+}
+.foodimg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.57) 100%);
+  z-index: 1;
+  border-radius: 0 0 2vw 2vw;
+}
+.foodimg a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+.images {
+  border-radius: 2vw;
+  width: 100%;
+  display: block;
+  box-shadow: 0vw 0.5vw 0.9vw 0vw rgba(0, 0, 0, 0.2);
+}
+.like,
+.duration {
+  position: absolute;
+  right: 1vw;
+  z-index: 3;
+}
+.like {
+  width: 1.9vw;
+  top: 1vw;
+}
+.duration {
+  bottom: 1vw;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+h3 {
+  font-size: 1.6vw;
+}
+.duration img {
+  margin-right: 0.4vw;
+  width: 1.4vw;
+}
+.dur {
+  font-size: 1.3vw;
+}
+.food-text {
+  display: block;
+  margin: 0.5vw 0;
+}
+.rating img {
+  width: 2vw;
+  padding-right: 0.5vw;
 }
 footer {
   padding: 4vw 8vw 4vw 8vw;
@@ -124,6 +318,7 @@ footer {
 #mes {
   width: 20vw;
   height: 5.5vw;
+  resize: none;
 }
 .log {
   margin-top: -1.8vw;
@@ -173,4 +368,690 @@ hr {
   width: 100%;
   text-align: center;
   margin-top: 1vw;
+}
+.message {
+  position: relative;
+}
+.numdiv {
+  position: absolute;
+  right: 1vw;
+  bottom: 0.3vw;
+}
+.message button {
+  padding: 0 !important;
+  border: 0 none !important;
+  background-color: transparent;
+  height: 1vw;
+}
+.message button img {
+  width: 1.3vw;
+}
+.meschar {
+  font-size: 0.9vw;
+  margin-right: 0.3vw;
+}
+.bannerimg {
+  width: 100%;
+  display: block;
+}
+.banner {
+  position: relative;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  display: block;
+  max-height: 70%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.62%, #000000 92.01%);
+}
+.rectitle {
+  font-size: 1.8vw;
+}
+.starpar {
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+}
+.solstar {
+  width: 1.6vw;
+}
+.nutdiv img {
+  width: 1.3vw;
+}
+.nutdiv span {
+  font-size: 1.3vw;
+}
+.ingredients li {
+  font-size: 1.3vw;
+  list-style-position: inside;
+}
+.info li {
+  font-size: 1.3vw;
+  list-style-position: inside;
+}
+.info p {
+  margin-bottom: 1vw;
+}
+.info img {
+  margin-bottom: 2vw;
+}
+.to2 {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding: 0;
+  background-color: transparent;
+  width: 100%;
+}
+.to2 > div {
+  background-color: #fa003f;
+  padding: 1vw 2vw 0vw 2vw;
+}
+.details {
+  position: absolute;
+  bottom: 0vw;
+  width: 100%;
+  padding: 2vw;
+  align-items: flex-end;
+  z-index: 1;
+  max-width: 97vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.details h2 {
+  color: white;
+}
+.nutrients {
+  color: white;
+  gap: 1vw;
+}
+.nutrients > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+.ing {
+  display: grid;
+  grid-template-columns: 30% 65%;
+  margin: 5vw auto;
+  max-width: min(97vw, 1700px);
+}
+.ing h5 {
+  font-size: 2vw;
+}
+.ing h6 {
+  font-size: 1.5vw;
+}
+.ing ol {
+  margin-bottom: 5vw;
+}
+.ing ul {
+  list-style: none;
+}
+.ingredients {
+  position: sticky;
+  top: 0;
+}
+.info img {
+  display: block;
+  width: 100%;
+}
+.account {
+  width: 100%;
+  padding: 10vw 30vw 10vw 10vw;
+}
+.red {
+  color: #fa003f;
+}
+.t {
+  font-size: 3vw;
+  font-weight: bold;
+}
+.det {
+  display: grid;
+  grid-template-columns: 18% 75%;
+  margin: 5vw auto;
+  max-width: 97vw;
+}
+.fidiv {
+  height: 10vw;
+  border-right: 1px solid #3c3c3c;
+  position: relative;
+}
+.op {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 1.4vw;
+  font-size: 1.2vw;
+  width: 90%;
+  text-align: right;
+  padding: 0.3vw;
+  border-style: none;
+  border-radius: 0.3vw;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.easytransition {
+  position: absolute;
+  transform: translateY(-0.1vw); /*-0.1, 3.7*/
+  right: 1vw;
+  background-color: #f4f4f4;
+  padding: 1.3vw 0;
+  width: 90%;
+  z-index: 0;
+  border-radius: 0.3vw;
+  transition: 0.3s ease;
+  will-change: transform;
+}
+.op:hover {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+.lah5 {
+  margin-bottom: 0vw !important;
+}
+.setprof {
+  border-radius: 6vw;
+  width: 6vw;
+  height: auto;
+}
+.topprof {
+  display: grid;
+  grid-template-columns: 20% 40%;
+  justify-content: center;
+}
+.changepic {
+  font-size: 1vw;
+  width: 14vw;
+  height: 2vw;
+  border-style: none;
+  border-radius: 0.5vw;
+  margin-bottom: 1vw;
+}
+.change {
+  font-size: 1vw;
+  height: 2vw;
+  width: 14vw;
+  background-color: white;
+  border-radius: 0.5vw;
+}
+.change img {
+  width: 1vw;
+  height: auto;
+  margin-right: 0.4vw;
+}
+.myprofile {
+  margin-left: 24vw;
+  width: 23vw;
+}
+.myprofile fieldset {
+  border-style: none;
+  margin-top: 1.2vw;
+}
+.myprofile fieldset input {
+  width: 100%;
+  height: 2.2vw;
+  border-radius: 0.6vw;
+  font-size: 1.2vw;
+}
+.myprofile fieldset label {
+  font-size: 1.3vw;
+}
+.submit {
+  text-align: right;
+  width: 100%;
+}
+.submit button {
+  width: 6vw;
+  height: 2.2vw;
+  color: white;
+  background-color: #fa003f;
+  border-radius: 2vw;
+  border-style: none;
+  margin-top: 1vw;
+  font-size: 1vw;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 1.2vw;
+  text-align: center;
+}
+th {
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+.da {
+  width: 12vw;
+}
+.se {
+  width: 25vw;
+}
+.creds {
+  margin-left: 12vw;
+}
+.creds label {
+  font-size: 1.3vw;
+  display: block;
+}
+.creds input {
+  margin-bottom: 1.2vw;
+  font-size: 1.2vw;
+  width: 22vw;
+  border-radius: 0.6vw;
+}
+.creds fieldset {
+  border-style: none;
+}
+.credsubmit {
+  margin-left: 16vw;
+}
+.credsubmit button {
+  width: 6vw;
+  height: 2.2vw;
+  color: white;
+  background-color: #fa003f;
+  border-radius: 2vw;
+  border-style: none;
+  margin-top: 1vw;
+}
+.reclink {
+  text-decoration: none;
+  color: black;
+}
+.foodsection {
+  position: relative;
+}
+button.prev,
+button.next {
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+button.prev {
+  left: -7vw;
+}
+button.next {
+  right: -7vw;
+}
+.ph {
+  text-decoration: none;
+}
+.nodec {
+  text-decoration: none;
+}
+.credsubmit button {
+  font-size: 1vw;
+}
+.likedrecipes {
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 3vw;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+}
+.message img {
+  width: 1.3vw;
+}
+.downarr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4vw;
+  width: 5vw;
+}
+@media (max-width: 1050px) {
+  .foodtype button {
+    font-size: 1.6vw;
+    width: 13vw;
+  }
+  .foodsection {
+    grid-template-columns: repeat(2, 43%);
+    max-width: 50vw;
+  }
+  .duration {
+    bottom: 1.5vw;
+  }
+  .prev {
+    display: none !important;
+  }
+  .next {
+    display: none !important;
+  }
+}
+@media (min-width: 1050px) {
+  .downarr {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .foodsection {
+    max-width: 70vw;
+  }
+  .popsearch button {
+    font-size: 2vw;
+  }
+  .im {
+    width: 7vw;
+  }
+  .tit {
+    font-size: 4.5vw;
+  }
+  .search1,
+  .search2 {
+    font-size: 4.5vw;
+  }
+  .searchdiv {
+    width: 50vw;
+  }
+  .in {
+    width: 50vw;
+    height: 5vw;
+    border-radius: 3vw;
+    padding-left: 6vw;
+  }
+  .in::placeholder {
+    font-size: 2vw;
+  }
+  .searchdiv img {
+    width: 2.5vw;
+  }
+  .foodtype button {
+    font-size: 2.5vw;
+    width: 16vw;
+    border-radius: 5vw;
+  }
+  .profile-box {
+    top: 1.1vw;
+  }
+  .profile-in {
+    display: none;
+  }
+  .usr {
+    display: none !important;
+  }
+  .boxname {
+    font-size: 1.6vw;
+  }
+  .profile-box a {
+    font-size: 1.8vw;
+  }
+  .like {
+    width: 3.8vw;
+  }
+  .duration img {
+    width: 2.5vw;
+  }
+  .dur {
+    font-size: 2.5vw;
+  }
+  h3 {
+    font-size: 2.5vw;
+  }
+  .rating img {
+    width: 3vw;
+  }
+  .starpar {
+    display: none;
+  }
+  .nutrients {
+    display: none;
+  }
+  .rectitle {
+    font-size: 4vw;
+    width: 100%;
+    text-align: center;
+  }
+  .titlepar {
+    width: 100%;
+  }
+  .nut {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #a6a6a6;
+    border-radius: 5vw;
+    padding: 2vw 1vw 2vw 3vw;
+  }
+  .nudiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nudiv img {
+    display: block;
+    width: 5vw;
+    padding-right: 1vw;
+  }
+  .nudiv span {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: white;
+    padding-right: 2vw;
+  }
+  .wstarpar {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+  }
+  .wstarpar img {
+    display: block;
+    width: 4vw;
+    padding-right: 1vw;
+  }
+  .ing {
+    display: none;
+  }
+  .ingeson {
+    padding: 5vw 10vw;
+  }
+  .ingr h5,
+  .meth h5,
+  .inf h5 {
+    font-size: 5vw;
+  }
+  .ingr h6 {
+    font-size: 4vw;
+  }
+  .ingr li {
+    font-size: 3vw;
+    list-style-position: inside;
+  }
+  .meth li {
+    font-size: 3vw;
+    list-style-type: none;
+  }
+  .inf {
+    padding: 5vw 10vw;
+  }
+  .inf img {
+    width: 100%;
+    border-radius: 3vw;
+    margin-top: 3vw;
+    margin-bottom: 6vw;
+  }
+  .inf li {
+    list-style-type: none;
+  }
+  .inf li p {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 400px) {
+  .nut {
+    display: none;
+  }
+  .inge {
+    display: none;
+  }
+}
+@media (min-width: 1500px) {
+  .downarr {
+    width: 70px;
+  }
+  .tit {
+    font-size: 60px;
+  }
+  .im {
+    width: 70px;
+  }
+  .search1 {
+    font-size: 60px;
+  }
+  .search2 {
+    font-size: 60px;
+  }
+  .searchdiv {
+    width: 700px;
+  }
+  .in {
+    font-size: 20px;
+    padding-left: 54px;
+    height: 60px;
+    width: 600px;
+  }
+  .in::placeholder {
+    font-size: 22px;
+  }
+  .searchdiv img {
+    width: 25px;
+  }
+  .magnifying {
+    left: 65px;
+  }
+  .shuffle {
+    right: 65px;
+  }
+  .popsearch button {
+    font-size: 16px;
+    padding: 13px 18px;
+  }
+  .foodtype button {
+    font-size: 16px;
+    padding: 13px 18px;
+    width: 160px;
+  }
+  .foodsection {
+    max-width: 1000px;
+  }
+  .like {
+    width: 30px;
+    top: 20px;
+  }
+  .element {
+    font-size: 25px;
+  }
+  .rating img {
+    width: 30px;
+    padding-right: 10px;
+  }
+  .dur {
+    font-size: 20px;
+  }
+  .duration {
+    bottom: 15px;
+  }
+  .duration img {
+    width: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .profile-box {
+    top: 1.4vw;
+    padding: 30px 40px;
+    border-radius: 20px;
+  }
+  .profile-in {
+    width: 100px;
+  }
+  .profile-in .edit {
+    bottom: 5px;
+    right: 10px;
+    width: 30px;
+  }
+  .profile-box span {
+    font-size: 15px;
+  }
+  .boxname {
+    font-size: 20px;
+  }
+  .profile-box a {
+    font-size: 20px;
+  }
+  .footerdiv {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .consi {
+    font-size: 22px;
+  }
+  .emsi {
+    font-size: 18px;
+  }
+  .log {
+    width: 100px;
+    height: 100px;
+  }
+  .socialim {
+    width: 30px;
+    height: 30px;
+  }
+  .emicon {
+    height: 15px;
+  }
+  .phicon {
+    height: 22px;
+    font-style: none;
+  }
+  .email,
+  .subject {
+    height: 26px;
+    max-width: 300px;
+  }
+  #mes {
+    height: 100px !important;
+  }
+  .meschar {
+    bottom: 0.4vw;
+    font-size: 15px;
+    right: 2.2vw;
+  }
+  .allrights {
+    font-size: 15px;
+  }
+  .bannerimg {
+    max-height: 1300px;
+    object-fit: cover;
+  }
+  .ing h5 {
+    font-size: 40px;
+  }
+  .ing h6 {
+    font-size: 30px;
+  }
+  .ingredients li {
+    font-size: 25px;
+  }
+  .info li {
+    font-size: 27px;
+  }
+  .likedrecipes {
+    font-size: 45px;
+  }
 }
