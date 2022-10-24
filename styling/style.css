@@ -1089,7 +1089,34 @@ button.next {
 
 /* -------------- ABOUT US -------------------- */
 .herotitle {
-  padding-top: 5vh;
+  padding-top: 10vh;
   padding-bottom: 5vh;
 }
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10vw;
+  padding-bottom: 20vh;
+  padding-top: 10vh;
+}
+
+/* .flex-item-right {
+
+  flex: 30%;
+}
+
+.flex-item-left {
+
+  flex: 30%;
+}
+
+.flex-item-mid {
+
+
+  flex: 30%;
+} */
 

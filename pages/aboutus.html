@@ -3,19 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>RecipeWise</title>
-    <link rel="stylesheet" href="./../styling/style.css" type="text/css"    
+    <link id='stylecss' type="text/css" rel="stylesheet" href="./../styling/style.css">
+    <!-- <link rel="stylesheet" href="/styling/rellax.min.js" type="text/Javascript">     -->
   </head>
 
   <body>
     <div class="aboutus">
+        
         <div class = "herotitle">
-            <h1 style="text-align: center;">Cooking. <span style="color: #FA003F;">Simplified.</span></h1>
+            <h1 style="text-align: center; font-size: 40px;">Cooking. <span style="color: #FA003F;">Simplified.</span></h1>
         </div>
 
-        <div class="parallaximg">
-            
+        <div class = "flex-container">
+          <div class="rellax" class = "flex-item-left">
+            <img src="./../assets/aboutus/parallax1.jpg" style="width:70%; height: auto;">
+          </div>
+          <div class="rellax" data-rellax-speed="2" class = "flex-item-mid">
+            <img src="./../assets/aboutus/parallax2.jpg" class="paraimg" style="width:70%; height: auto;">
+          </div>
+          <div class="rellax" data-rellax-speed="-4" class = "flex-item-right">
+            <img src="./../assets/aboutus/parallax3.jpg" class="paraimg" style="width:70%; height: auto;">
+          </div>
         </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+        <script>
+          // Accepts any class name
+          var rellax = new Rellax('.rellax');
+        </script>
     </div>
+
+
 
   </body>
 
