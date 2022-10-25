@@ -29,7 +29,7 @@
         </div>
         
         <!-- Link to sign up page -->
-        <div class="signUpDiv"><a class="signUpLink" href="signUp.html">New? Create an account!</a><br></div>
+        <div class="signUpDiv"><a class="signUpLink" href="signUp.php">New? Create an account!</a><br></div>
 
         <!-- Submit button -->
         <button><span>Sign In</spa></button>
