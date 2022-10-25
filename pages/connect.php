@@ -2,9 +2,9 @@
 
 Class Database{
  
-	private $server = "mysql:host=localhost;dbname=recipe";
-	private $username = "root";
-	private $password = "";
+	private $server = "mysql:host=localhost;dbname=crowfnvx_recipe";
+	private $username = "crowfnvx";
+	private $password = "Ve5iVNPV5mkW";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
 	protected $conn;
  	

@@ -595,11 +595,13 @@ hr {
 }
 .myprofile fieldset input {
   width: 100%;
+  display: block;
   height: 2.2vw;
   border-radius: 0.6vw;
   font-size: 1.2vw;
 }
 .myprofile fieldset label {
+  display: block;
   font-size: 1.3vw;
 }
 .submit {
@@ -740,7 +742,7 @@ button.next {
     display: none;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .foodsection {
     max-width: 70vw;
   }
@@ -891,12 +893,81 @@ button.next {
   .inf li p {
     font-size: 3.5vw;
   }
+  footer > div > div.flex {
+    flex-wrap: wrap;
+  }
+  footer > div > div > div {
+    width: 48%;
+  }
+  .contactw {
+    width: 100%;
+  }
+  .socialdiv,
+  .contactw .flex {
+    justify-content: flex-start;
+    gap: 2.5vw;
+  }
+  .contactw .flex span {
+    width: 20%;
+    display: block;
+  }
+  .ladiv > img {
+    margin-left: 0;
+  }
+  .consi {
+    font-size: 4vw;
+  }
+  .emsi {
+    font-size: 3.3vw;
+  }
+  .email,
+  .subject {
+    padding: 1.3vw;
+    width: 75%;
+    display: block;
+  }
+  .meschar {
+    font-size: 3vw;
+  }
+  .message button img {
+    width: 3vw;
+  }
+  footer textarea {
+    display: block;
+    width: 100% !important;
+    height: 65px !important;
+    margin-bottom: 20px;
+  }
+  .log {
+    display: none;
+  }
+  .logo {
+    color: white;
+    font-size: 7vw;
+    position: relative;
+    left: 20px;
+  }
+  .emicon {
+    width: 3vw;
+    height: 3vw;
+  }
+  .phicon {
+    width: 3vw;
+    height: 3vw;
+  }
+  .socialim {
+    width: 3vw;
+    height: 3vw;
+  }
 }
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .nut {
     display: none;
   }
   .inge {
+    display: none;
+  }
+  .logo {
     display: none;
   }
 }

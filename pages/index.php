@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RecipeWise</title>
     <link id='stylecss' type="text/css" rel="stylesheet" href="./../styling/style.css">
   </head>
@@ -199,66 +201,70 @@
         </div>
       </section>
     </main>
-  </body>
-  <footer>
-    <div class="footerdiv">
-      <div class="flex spacebetween">
-        <div class="contactw">
-          <span class="colw popbo consi">Contact Us</span>
-          <div class="flex spacebetween mato mabo">
-            <span class="colw popno emsi">Email:</span>
-            <input type="text" class="email">
+    <footer>
+      <div class="footerdiv">
+        <div class="flex spacebetween contactusform">
+          <div class="contactw">
+            <span class="colw popbo consi">Contact Us</span>
+            <div class="flex spacebetween mato mabo">
+              <span class="colw popno emsi">Email:</span>
+              <input type="text" class="email">
+            </div>
+            <div class="flex spacebetween mabo">
+              <span class="colw popno emsi">Subject:</span>
+              <input type="text" class="subject">
+            </div>
+            <div class="message">
+              <span class="bl colw popno mabo emsi">Message:</span>
+              <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
+              <div class="numdiv">
+                <span class="meschar">
+                  0/256
+                </span>
+                <button type="submit">
+                  <img src="./../assets/plane.svg" alt="plane image">
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="flex spacebetween mabo">
-            <span class="colw popno emsi">Subject:</span>
-            <input type="text" class="subject">
+          <div class="sitemap">
+            <span class="colw popbo consi">Sitemap</span>
+            <div>
+              <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
+              <a href="profile.php" class="nodec bl colw popno emsi mabo">My Profile</a>
+              <a href="" class="nodec bl colw popno emsi mabo">About Us</a>
+              <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
+            </div>
           </div>
-          <div class="message">
-            <span class="bl colw popno mabo emsi">Message:</span>
-            <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
-            <div class="numdiv">
-              <span class="meschar">
-                0/256
-              </span>
-              <button type="submit">
-                <img src="./../assets/plane.svg" alt="plane image">
-              </button>
+          <div class="ladiv">
+            <img src="./../assets/logo.png" class="log" alt="Logo">
+            <div class="logoclass">
+              <h6 class="logo">Recipe</h6>
+              <h6 class="logo">Wise</h6>
+            </div>
+            <div class="flex aligncenter">
+              <img src="./../assets/email.png" class="emicon" alt="email icon">
+              <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
+            </div>
+            <div class="flex aligncenter contacttop">
+              <img src="./../assets/phone.png" class="phicon" alt="phone icon">
+              <a class="colw popno emsi ph" href="tel:1300566466">1300 566 466</a>
+            </div>
+            <div class="socialdiv flex spacebetween">
+              <img class="socialim" src="./../assets/facebook.png" alt="Facebook image">
+              <img class="socialim" src="./../assets/instagram.png" alt="Instagram image">
+              <img class="socialim" src="./../assets/tiktok.png" alt="TikTok image">
+              <img class="socialim" src="./../assets/youtube.png" alt="YouTube image">
+              <img class="socialim" src="./../assets/twitter.png" alt="Twitter image">
             </div>
           </div>
         </div>
-        <div class="sitemap">
-          <span class="colw popbo consi">Sitemap</span>
-          <div>
-            <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
-            <a href="profile.php" class="nodec bl colw popno emsi mabo">My Profile</a>
-            <a href="" class="nodec bl colw popno emsi mabo">About Us</a>
-            <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
-          </div>
-        </div>
-        <div>
-          <img src="./../assets/logo.png" class="log" alt="Logo">
-          <div class="flex aligncenter">
-            <img src="./../assets/email.png" class="emicon" alt="email icon">
-            <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
-          </div>
-          <div class="flex aligncenter contacttop">
-            <img src="./../assets/phone.png" class="phicon" alt="phone icon">
-            <a class="colw popno emsi ph" href="tel:1300566466">1300 566 466</a>
-          </div>
-          <div class="socialdiv flex spacebetween">
-            <img class="socialim" src="./../assets/facebook.png" alt="Facebook image">
-            <img class="socialim" src="./../assets/instagram.png" alt="Instagram image">
-            <img class="socialim" src="./../assets/tiktok.png" alt="TikTok image">
-            <img class="socialim" src="./../assets/youtube.png" alt="YouTube image">
-            <img class="socialim" src="./../assets/twitter.png" alt="Twitter image">
-          </div>
-        </div>
       </div>
-    </div>
-    <hr>
-    <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
-  </footer>
-  <script src="./script.js">
-    
-  </script>
+      <hr>
+      <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
+    </footer>
+    <script src="./script.js">
+      
+    </script>
+  </body>
 </html>
