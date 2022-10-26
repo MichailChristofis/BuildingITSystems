@@ -5,7 +5,6 @@ let finhash = BigInt(0),
 document.querySelector("button").addEventListener("click", () => {
   let hash = email + password;
   for (let i = 0; i < hash.length; i++) {
-    console.log("HI");
     finhash *= 131n;
     finhash += BigInt(hash.charCodeAt(i));
     finhash %= n;

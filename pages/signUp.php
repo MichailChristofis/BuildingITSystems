@@ -20,19 +20,15 @@
 
         <!-- Labels and fields -->
         <div class="alignLeft">
-            <form>
+            <form id="myForm" action="./handleusers.php" method="POST">
                 <label for="email">Email:</label><br>
                 <input type="text" id="email" name="email"><br>
                 <label for="password">Password:</label><br>
                 <input type="text" id="password" name="password"><br>
             </form>
         </div>
-        
-        <!-- Link to sign up page -->
         <div class="signUpDiv"><a class="signUpLink" href="signIn.html">Already have an account? Sign in here!</a><br></div>
-
-        <!-- Submit button -->
-        <button><span>Sign Up</spa></button>
+        <button for="myForm" type="submit"><span>Sign Up</span></button>
     </div>
 </body>
 </html>
