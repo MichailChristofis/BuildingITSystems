@@ -8,20 +8,41 @@
   </head>
 
   <body>
-    <div class="aboutus">
+    <div class="over">
+      <div class="to to2">
+        <div class="flex spacebetween aligncenter">
+          <a href="./index.php" class="nodec"><span class="tit">RecipeWise</span></a>
+          <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
+          <div class="profile-box profempty">
+            <div class="profile-in">
+              <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
+              <img class="im" src="./../assets/prof.png" alt="profile image">
+            </div>
+            <span class="usr">@jennifer.daniels</span>
+            <h5 class="boxname">Jennifer Daniels</h5>
+            <div class="profilelinks">
+              <a href="./profile.php">Account</a>
+              <a href="./liked.php">Liked Recipes</a>
+              <a href="">Log Out</a>
+            </div>
+          </div>
+        </div>
+        <img class="svg" src="./../assets/headsmall.svg" alt="">
+      </div>
+    <div class="aboutus"> 
         
         <div class = "herotitle">
             <h1 style="text-align: center; font-size: 40px;">Cooking. <span style="color: #FA003F;">Simplified.</span></h1>
         </div>
 
         <div class = "flex-container">
-          <div class="rellax" class = "flex-item-left">
+          <div class="rellax" data-rellax-speed="-0.5" class = "flex-item-left">
             <img src="./../assets/aboutus/parallax1.jpg" style="width:70%; height: auto;">
           </div>
-          <div class="rellax" data-rellax-speed="2" class = "flex-item-mid">
+          <div class="rellax" data-rellax-speed="1" class = "flex-item-mid">
             <img src="./../assets/aboutus/parallax2.jpg" class="paraimg" style="width:70%; height: auto;">
           </div>
-          <div class="rellax" data-rellax-speed="-4" class = "flex-item-right">
+          <div class="rellax" data-rellax-speed="-1" class = "flex-item-right">
             <img src="./../assets/aboutus/parallax3.jpg" class="paraimg" style="width:70%; height: auto;">
           </div>
         </div>
@@ -32,6 +53,30 @@
           // Accepts any class name
           var rellax = new Rellax('.rellax');
         </script>
+
+        <div id = "ourstorytext">
+          <h2>Our Story.</h2>
+          <p>We are a young group of individuals who seek to make the every day tedious task into a much easier endeavor. Starting off with something we all do everyday, and that is to make/eat food! Our first step is streamlining and making this often draining task a more interactive and catered process for everyone involved.</p>
+        </div>
+
+        <div id="aboutusperson">
+          <img src="./../assets/aboutusperson.png" style="width:40%; height: auto;">
+        </div>
+        <div class="theteam">
+          <h2>The Team.</h2>
+          <div class = "teamgallery">
+            <div class="teamimages">
+              <div><img src="./../assets/aboutus/team1.jpg"></div>
+              <div><img src="./../assets/aboutus/team2.jpg"></div>
+              <div><img src="./../assets/aboutus/team3.jpg"></div>
+              <div><img src="./../assets/aboutus/team4.jpg"></div>
+              <div><img src="./../assets/aboutus/team5.jpg"></div>
+            </div>
+          </div>
+          
+
+        </div>
+
     </div>
 
 

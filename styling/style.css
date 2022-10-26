@@ -1104,19 +1104,48 @@ button.next {
   padding-top: 10vh;
 }
 
-/* .flex-item-right {
-
-  flex: 30%;
+.aboutus {
+  padding-top: 45vh;
 }
 
-.flex-item-left {
-
-  flex: 30%;
+#ourstorytext {
+  text-align: center;
+  flex: auto;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  font-size: 1.2em;
 }
 
-.flex-item-mid {
+#aboutusperson {
+  display: flex;
+  justify-content: center;
+}
 
+.theteam {
+  padding-left: 10vw;
+  padding-bottom: 5vh;
+}
 
-  flex: 30%;
-} */
+.teamgallery {
+  display: flex;
+  justify-content: right;
+}
+
+.teamimages {
+  /* position: absolute; */
+  /* bottom: 8px; */
+  display: flex;
+  justify-content:flex-end;
+  flex-direction: row;
+  /* gap: 6px; */
+}
+
+.teamimages img {
+  width: auto;
+  height: 7%;
+  border-radius: 5px;
+
+}
 
