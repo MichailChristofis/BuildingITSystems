@@ -285,7 +285,7 @@
   </body>
   <footer>
     <div class="footerdiv">
-      <div class="flex spacebetween">
+      <div class="flex spacebetween contactusform">
         <div class="contactw">
           <span class="colw popbo consi">Contact Us</span>
           <div class="flex spacebetween mato mabo">
@@ -299,15 +299,17 @@
           <div class="message">
             <span class="bl colw popno mabo emsi">Message:</span>
             <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
-            <span class="meschar">
-              0/256
-            </span>
-            <button type="submit">
-              <img src="./../assets/plane.svg" alt="plane image">
-            </button>
+            <div class="numdiv">
+              <span class="meschar">
+                0/256
+              </span>
+              <button type="submit">
+                <img src="./../assets/plane.svg" alt="plane image">
+              </button>
+            </div>
           </div>
         </div>
-        <div>
+        <div class="sitemap">
           <span class="colw popbo consi">Sitemap</span>
           <div>
             <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
@@ -316,8 +318,12 @@
             <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
           </div>
         </div>
-        <div>
+        <div class="ladiv">
           <img src="./../assets/logo.png" class="log" alt="Logo">
+          <div class="logoclass">
+            <h6 class="logo">Recipe</h6>
+            <h6 class="logo">Wise</h6>
+          </div>
           <div class="flex aligncenter">
             <img src="./../assets/email.png" class="emicon" alt="email icon">
             <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>

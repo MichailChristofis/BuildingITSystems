@@ -959,6 +959,9 @@ button.next {
     width: 3vw;
     height: 3vw;
   }
+  .allrights {
+    font-size: 3vw !important;
+  }
 }
 @media (min-width: 500px) {
   .nut {
