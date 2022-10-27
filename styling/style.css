@@ -1128,24 +1128,38 @@ button.next {
   padding-bottom: 5vh;
 }
 
-.teamgallery {
-  display: flex;
-  justify-content: right;
-}
-
 .teamimages {
-  /* position: absolute; */
-  /* bottom: 8px; */
   display: flex;
-  justify-content:flex-end;
   flex-direction: row;
-  /* gap: 6px; */
+  flex-wrap: wrap;
 }
 
-.teamimages img {
-  width: auto;
-  height: 7%;
-  border-radius: 5px;
+
+.teamimg {
+  padding-top: 3vh;
+  width: 15%;
+  height:auto;
+  margin: 5px;
+  border-radius: 10px;
 
 }
 
+.reviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:80vw;
+  margin:0 auto;
+  
+}
+
+.reviews h2 {
+  text-align: center;
+}
+
+.reviews img {
+  height: auto;
+  width: 25%;
+  padding: 2%;
+}
