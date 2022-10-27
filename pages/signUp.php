@@ -16,19 +16,25 @@
 
     <div class="centre">
         <!-- Sign in title -->
-        <h2>Sign Up</h2>
+        <h2>Sign up</h2>
 
         <!-- Labels and fields -->
         <div class="alignLeft">
-            <form id="myForm" action="./handleusers.php" method="POST">
-                <label for="email">Email:</label><br>
+            <form id="myform" action="./addprof.php" method="POST">
+                <label for="email">Username:</label><br>
                 <input type="text" id="email" name="email"><br>
                 <label for="password">Password:</label><br>
-                <input type="text" id="password" name="password"><br>
+                <input type="text" id="password" name="password" ><br>
+                <input type="hidden" id="c" name="c">
             </form>
         </div>
-        <div class="signUpDiv"><a class="signUpLink" href="signIn.html">Already have an account? Sign in here!</a><br></div>
-        <button for="myForm" type="submit"><span>Sign Up</span></button>
+        
+        <!-- Link to sign up page -->
+        <div class="signUpDiv"><a class="signUpLink" href="signIn.php">Already have an account? Sign in!</a><br></div>
+
+        <!-- Submit button -->
+        <button type="submit" form="myform"><span>Sign Up</spa></button>
     </div>
 </body>
+<script src="./signup.js"></script>
 </html>

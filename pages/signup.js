@@ -1,14 +1,11 @@
-console.log(localStorage["c"]);
-if (localStorage.hasOwnProperty("c")) {
-  document.querySelector("#c").value = localStorage["c"];
-  document.querySelector("button").click();
-}
 let email = document.querySelector("#email"),
   password = document.querySelector("#password");
 let finhash = BigInt(0),
   n = BigInt(882564595536224133043402117781943411655206608208563741392896);
 document.querySelector("button").addEventListener("click", () => {
+  console.log("HI1");
   let hash = email.value + password.value;
+  console.log(hash);
   for (let i = 0; i < hash.length; i++) {
     finhash *= 131n;
     finhash += BigInt(hash.charCodeAt(i));
@@ -20,4 +17,6 @@ document.querySelector("button").addEventListener("click", () => {
     c %= n;
   }
   document.querySelector("#c").value = c;
+  console.log(document.querySelector("#c"));
+  localStorage.setItem("c", BigInt(c));
 });

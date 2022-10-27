@@ -21,7 +21,7 @@
         <!-- Labels and fields -->
         <div class="alignLeft">
             <form id="myform" action="./check.php" method="POST">
-                <label for="email">Email:</label><br>
+                <label for="email">Username:</label><br>
                 <input type="text" id="email" name="email"><br>
                 <label for="password">Password:</label><br>
                 <input type="text" id="password" name="password" ><br>
@@ -30,7 +30,7 @@
         </div>
         
         <!-- Link to sign up page -->
-        <div class="signUpDiv"><a class="signUpLink" href="signUp.html">New? Create an account!</a><br></div>
+        <div class="signUpDiv"><a class="signUpLink" href="signUp.php">New? Create an account!</a><br></div>
 
         <!-- Submit button -->
         <button type="submit" form="myform"><span>Sign In</spa></button>
