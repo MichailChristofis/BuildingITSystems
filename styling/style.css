@@ -602,18 +602,34 @@ hr {
   grid-template-columns: 20% 40%;
   justify-content: center;
 }
+.changeform {
+  display: block;
+}
+.changeform input {
+  width: 0;
+  height: 0vw;
+}
 .changepic {
+  display: block;
   font-size: 1vw;
+  line-height: 1vw;
+  text-align: center;
   width: 14vw;
   height: 2vw;
   border-style: none;
-  border-radius: 0.5vw;
-  margin-bottom: 1vw;
+  border-radius: 2vw;
+  margin-bottom: 0.5vw;
+  padding: 0.5vw 1vw;
+  background-color: #ededed;
+}
+#profilepic {
+  display: block;
 }
 .change {
+  margin-top: 1vw;
   font-size: 1vw;
   height: 2vw;
-  width: 14vw;
+  width: 13vw;
   background-color: white;
   border-radius: 0.5vw;
 }

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php 
+    include "tools.php";
+    if(!isset($_SESSION["m"])){
+      echo "<script>localStorage.clear();window.location.href='./signIn.php';</script>";
+    }
+  ?>
   <head>
     <meta charset="utf-8">
     <title>RecipeWise</title>
@@ -9,18 +15,18 @@
     <div class="to">
       <div class="flex spacebetween aligncenter">
           <a href="./index.php" class="nodec"><span class="tit">RecipeWise</span></a>
-        <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
+        <img class="im toggleprof" src="<?php echo get_prof_img()?>" alt="profile image" tabindex="1">
         <div class="profile-box profempty">
           <div class="profile-in">
             <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
-            <img class="im" src="./../assets/prof.png" alt="profile image">
+            <img class="im" src="<?php echo get_prof_img()?>" alt="profile image">
           </div>
           <span class="usr">@jennifer.daniels</span>
           <h5 class="boxname">Jennifer Daniels</h5>
           <div class="profilelinks">
             <a href="./profile.php">Account</a>
             <a href="./liked.php">Liked Recipes</a>
-            <a href="">Log Out</a>
+            <a href="./logout.php">Log Out</a>
           </div>
         </div>
       </div>

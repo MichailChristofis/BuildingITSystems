@@ -5,7 +5,7 @@ if (localStorage.hasOwnProperty("c")) {
 let email = document.querySelector("#email"),
   password = document.querySelector("#password");
 let finhash = BigInt(0),
-  n = BigInt(882564595536224133043402117781943411655206608208563741392896);
+  n = 882564595536224140639625987659416029426239230804614613279163n;
 document.querySelector("button").addEventListener("click", () => {
   let hash = email.value + password.value;
   for (let i = 0; i < hash.length; i++) {
@@ -13,7 +13,7 @@ document.querySelector("button").addEventListener("click", () => {
     finhash += BigInt(hash.charCodeAt(i));
     finhash %= n;
   }
-  let c = BigInt(1);
+  let c = 1n;
   for (let i = 0; i < 65537; i++) {
     c = c * finhash;
     c %= n;

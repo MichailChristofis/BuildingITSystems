@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php 
+    include "tools.php";
+    if(!isset($_SESSION["m"])){
+      echo "<script>localStorage.clear();window.location.href='./signIn.php';</script>";
+    }
+  ?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +17,18 @@
     <div class="to">
       <div class="flex spacebetween aligncenter">
           <a href="./index.php" class="nodec"><span class="tit">RecipeWise</span></a>
-        <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
+        <img class="im toggleprof" src="<?php echo get_prof_img()?>" alt="profile image" tabindex="1">
         <div class="profile-box profempty">
           <div class="profile-in">
             <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
-            <img class="im" src="./../assets/prof.png" alt="profile image">
+            <img class="im" src="<?php echo get_prof_img()?>" alt="profile image">
           </div>
           <span class="usr">@jennifer.daniels</span>
           <h5 class="boxname">Jennifer Daniels</h5>
           <div class="profilelinks">
             <a href="./profile.php">Account</a>
             <a href="./liked.php">Liked Recipes</a>
-            <a href="">Log Out</a>
+            <a href="./logout.php">Log Out</a>
           </div>
         </div>
       </div>
@@ -42,10 +48,13 @@
           <button class="lah5 op nu3">Security</button>
         </div>
         <div class="topprof no1">
-          <img class="setprof" src="./../assets/prof.png" alt="">
+          <img class="setprof" src=<?php echo get_prof_img()?> alt="">
           <div>
-            <button class="changepic">Change Profile Picture</button>
-            <button class="change flex justifycenter aligncenter">
+            <form class="changeform" enctype="multipart/form-data" action="./profimgchange.php" method="POST">
+              <label for="profilepic" class="changepic">Change Profile Picture</label>
+              <input type="file" style="visibility:hidden" id="profilepic" name="profilepic" onchange="form.submit()">
+            </form>
+            <button onclick="window.location.href='defimg.php'" class="change flex justifycenter aligncenter">
               <img src="./../assets/delete.svg" alt="Delete button">
               <span>Remove</span>
             </button>
@@ -113,7 +122,7 @@
           </table>
         </div>
         <div class="no3 nodisplay">
-          <form class="creds" action="./profchanges.php" method="POST"> 
+          <form class="creds" action="./editcredentials.php" method="POST"> 
             <fieldset>
               <label for="uname">Username:</label>
               <input type="text" id="uname" name="uname" required>
