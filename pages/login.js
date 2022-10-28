@@ -1,4 +1,3 @@
-console.log(localStorage["c"]);
 if (localStorage.hasOwnProperty("c")) {
   document.querySelector("#c").value = localStorage["c"];
   document.querySelector("button").click();

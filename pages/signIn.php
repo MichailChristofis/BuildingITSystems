@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php session_start()?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,6 +35,7 @@
 
         <!-- Submit button -->
         <button type="submit" form="myform"><span>Sign In</spa></button>
+        <h2 style="font-size: 1.5vw"><?php if(isset($_SESSION["res"])){echo $_SESSION["res"];session_destroy();}?></h2>
     </div>
 </body>
 <script src="./login.js"></script>

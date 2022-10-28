@@ -18,5 +18,4 @@ document.querySelector("button").addEventListener("click", () => {
   }
   document.querySelector("#c").value = c;
   console.log(document.querySelector("#c"));
-  localStorage.setItem("c", BigInt(c));
 });

@@ -9,9 +9,11 @@
   try{
     $insertData->execute(['a'=>$m]);
     $_SESSION["m"]=$m;
+    $_SESSION["scr"]="<script>localStorage.setItem(\"c\", BigInt({$c}));</script>";
     header("Location: index.php");
   }
   catch(PDOException $e){
+    $_SESSION["res"]="This username is currently in use, please try a different username.";
     header("Location: signUp.php");
   }
 ?>

@@ -9,10 +9,11 @@ $checkData=$newData->prepare("SELECT COUNT(*) FROM profile WHERE m=:a");
 $checkData->execute(['a'=>$m]);
 if($checkData->fetchColumn()==1){
   $_SESSION["m"]=$m;
-  echo "<script>localStorage.setItem(\"c\", BigInt({$c}));</script>";
+  $_SESSION["scr"]="<script>localStorage.setItem(\"c\", BigInt({$c}));</script>";
   header("Location: index.php");
 }
 else{
+  $_SESSION["res"]="Sign in invalid, please try again";
   header("Location: signIn.php");
 }
 ?>

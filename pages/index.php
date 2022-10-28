@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php session_start();?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -263,6 +264,7 @@
       <hr>
       <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
     </footer>
+    <?php if(isset($_SESSION["scr"])){echo $_SESSION["scr"];}?>
     <script src="./script.js">
       
     </script>
