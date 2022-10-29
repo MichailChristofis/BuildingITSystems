@@ -58,21 +58,423 @@
     </div>
     <img class="svg" src="./../assets/headsmall.svg" alt="">
     <div class="foodtype flex justifycenter">
-      <button>
+      <button class="b1 pressed">
         Spanish
       </button>
-      <button>
+      <button class="b2">
         French
       </button>
-      <button>
+      <button class="b3">
         English
       </button>
-      <button>
+      <button class="b4">
         Australian
       </button>
     </div>
     <main>
-      <section class="foodsection">
+      <section class="foodsection spanish">
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/burger.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">The Breakfast Burger</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/meat.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Flank Steak</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/steak.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Steak From Heaven</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/sushi.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Salmon Nigiri</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/rice.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Fried Rice</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href="./recipe.php"><img class="images" src="./../assets/chicken.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="./recipe.php">Grilled Chicken Breast</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+      </section>
+      <section class="foodsection french goaway">
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/burger.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">The Breakfast Burger</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/meat.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Flank Steak</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/steak.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Steak From Heaven</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/sushi.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Salmon Nigiri</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/rice.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Fried Rice</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href="./recipe.php"><img class="images" src="./../assets/chicken.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="./recipe.php">Grilled Chicken Breast</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+      </section>
+      <section class="foodsection english goaway">
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/burger.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">The Breakfast Burger</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/meat.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Flank Steak</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/steak.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Steak From Heaven</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/sushi.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Salmon Nigiri</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href=""><img class="images" src="./../assets/rice.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="">Fried Rice</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-regular.png" alt="empty star">
+          </div>
+        </div>
+        <div>
+          <div class="foodimg">
+            <img class="like empty" src="./../assets/heart.png" alt="heart image">
+            <div class="duration">
+              <img src="./../assets/clock.svg" alt="clock image">
+              <span class="dur">40 min</span>
+            </div>
+            <a href="./recipe.php"><img class="images" src="./../assets/chicken.png" alt="burger image"></a>
+          </div>
+          <div class="food-text">
+            <h3>
+              <a class="reclink" href="./recipe.php">Grilled Chicken Breast</a>
+            </h3>
+          </div>
+          <div class="rating">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+            <img src="./../assets/star-solid.png" alt="solid star">
+          </div>
+        </div>
+      </section>
+      <section class="foodsection australian goaway">
         <div>
           <div class="foodimg">
             <img class="like empty" src="./../assets/heart.png" alt="heart image">
@@ -270,6 +672,7 @@
       <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
     </footer>
     <?php if(isset($_SESSION["scr"])){echo $_SESSION["scr"];}?>
+    <script src="./indexscript.js"></script>
     <script src="./script.js">
       
     </script>

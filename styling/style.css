@@ -222,6 +222,11 @@ body {
   background-color: #f5f5f5;
   transition: 0.3s ease;
 }
+.pressed {
+  font-weight: bold;
+  background-color: grey !important;
+  color: white;
+}
 .foodtype button:hover,
 .foodtype button.active {
   font-weight: bold;
@@ -608,6 +613,17 @@ hr {
 .changeform input {
   width: 0;
   height: 0vw;
+}
+.goaway {
+  display: none;
+}
+.er {
+  display: block;
+  width: 22vw !important;
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 1.2vw;
+  color: #fa003f;
 }
 .changepic {
   display: block;

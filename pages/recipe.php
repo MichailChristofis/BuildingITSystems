@@ -34,34 +34,30 @@
         <img class="svg" src="./../assets/headsmall.svg" alt="">
       </div>
       <div class="banner">
-        <img class="bannerimg" src="./../assets/recipes/chicken1.png" alt="chicken image">
+        <img class="bannerimg" src="<?php echo get_rec_img($_GET["id"])?>" alt="chicken image">
         <div class="details flex spacebetween">
           <div class="titlepar">
-            <h2 class="rectitle">Grilled Chicken Breast with Bacon</h2>
+            <h2 class="rectitle"><?php echo get_rec_tit($_GET["id"])?></h2>
             <div class="starpar">
-              <img class="solstar" src="./../assets/star-solid.png" alt="solid star image">
-              <img class="solstar" src="./../assets/star-solid.png" alt="solid star image">
-              <img class="solstar" src="./../assets/star-solid.png" alt="solid star image">
-              <img class="solstar" src="./../assets/star-solid.png" alt="solid star image">
-              <img class="solstar" src="./../assets/star-solid.png" alt="solid star image">
+              <?php get_rec_stars($_GET["id"])?>
             </div>
           </div>
           <div class="flex nutrients">
             <div class="nutdiv">
               <img src="./../assets/protein.svg" alt="protein">
-              <span>60g protein</span>
+              <span><?php echo get_rec_protein($_GET["id"])?>g protein</span>
             </div>
             <div class="nutdiv">
               <img src="./../assets/carbs.svg" alt="carbs">
-              <span>20g carbs</span>
+              <span><?php echo get_rec_carbs($_GET["id"])?>g carbs</span>
             </div>
             <div class="nutdiv">
               <img src="./../assets/calories.svg" alt="calories">
-              <span>600 kcal</span>
+              <span><?php echo get_rec_cal($_GET["id"])?> kcal</span>
             </div>
             <div class="nutdiv">
               <img src="./../assets/clock.svg" alt="duration">
-              <span>40 min</span>
+              <span><?php echo get_rec_time($_GET["id"])?> min</span>
             </div>
           </div>
         </div>
@@ -100,59 +96,25 @@
           <div class="ingr">
             <h5>Ingredients</h5>
             <h6>For 4 servings</h6>
-            <ol>
-              <li>
-                4 pcs chicken breast fillets
-              </li>
-              <li>
-                4 slices of bacon
-              </li>
-              <li>
-                1 dl of oil
-              </li>
-              <li>
-                2tbsp soy sauce
-              </li>
-              <li>
-                2 tbsp chili sauce
-              </li>
-              <li>
-                4 shallots
-              </li>
-              <li>
-                1tbsp salt
-              </li>
-              <li>
-                4 tbsp ground black pepper
-              </li>
-              <li>
-                2 cloves of garlic
-              </li>
-              <li>
-                0.5 mk strong paprika cream
-              </li>
-              <li>
-                1 bouillon cube
-              </li>
-            </ol>
+            <?php get_ingredients($_GET["id"])?>
           </div>
           <div class="meth">
             <h5>Method</h5>
             <ul>
               <li>
-                Calories <b>XXX</b>
+                Calories: <b><?php echo get_rec_cal($_GET["id"])?> kcal</b>
               </li>
               <li>
-                Carbs <b>XXXg</b>
+                Carbs: <b><?php echo get_rec_carbs($_GET["id"])?>g</b>
               </li>
               <li>
-                Fiber <b>XXXg</b>
+                Fiber: <b><?php echo get_rec_fiber($_GET["id"])?>g</b>
               </li>
               <li>
-                Protein <b>XXXg</b>
+                Protein: <b><?php echo get_rec_protein($_GET["id"])?>g</b>
               </li>
               <li>
-                Sugar <b>XXXg</b>
+                Sugar: <b><?php echo get_rec_sugar($_GET["id"])?>g</b>
               </li>
             </ul>
           </div>
@@ -161,35 +123,7 @@
           <h5>
             Method:
           </h5>
-          <ol>
-            <li>
-              <p>
-                Mix the marinade ingredients, oil, soy sauce and chili sauce,
-                finely chopped scallions, salt, pepper, garlic and paprika cream,
-                pour into a double nylon bag, add the chicken breast fillets, shake
-                well and refrigerate overnight.
-              </p>
-              <img src="./../assets/recipes/chicken2.png" alt="">
-            </li>
-            <li>
-              <p>
-                Mix the marinade ingredients, oil, soy sauce and chili sauce,
-                finely chopped scallions, salt, pepper, garlic and paprika cream,
-                pour into a double nylon bag, add the chicken breast fillets, shake
-                well and refrigerate overnight.
-              </p>
-              <img src="./../assets/recipes/chicken3.png" alt="">
-            </li>
-            <li>
-              <p>
-                Mix the marinade ingredients, oil, soy sauce and chili sauce,
-                finely chopped scallions, salt, pepper, garlic and paprika cream,
-                pour into a double nylon bag, add the chicken breast fillets, shake
-                well and refrigerate overnight.
-              </p>
-              <img src="./../assets/recipes/chicken4.png" alt="">
-            </li>
-          </ol>
+          <?php get_methods($_GET["id"])?>
         </div>
       </div>
       <div class="ing spacebetween">
@@ -197,57 +131,23 @@
           <div class="ingredients">
             <h5>Ingredients</h5>
             <h6>For 4 servings</h6>
-            <ol>
-              <li>
-                4 pcs chicken breast fillets
-              </li>
-              <li>
-                4 slices of bacon
-              </li>
-              <li>
-                1 dl of oil
-              </li>
-              <li>
-                2tbsp soy sauce
-              </li>
-              <li>
-                2 tbsp chili sauce
-              </li>
-              <li>
-                4 shallots
-              </li>
-              <li>
-                1tbsp salt
-              </li>
-              <li>
-                4 tbsp ground black pepper
-              </li>
-              <li>
-                2 cloves of garlic
-              </li>
-              <li>
-                0.5 mk strong paprika cream
-              </li>
-              <li>
-                1 bouillon cube
-              </li>
-            </ol>
+            <?php get_ingredients($_GET["id"])?>
             <h5>Nutrition Info</h5>
             <ul>
               <li>
-                Calories <b>XXX</b>
+                Calories: <b><?php echo get_rec_cal($_GET["id"])?> kcal</b>
               </li>
               <li>
-                Carbs <b>XXXg</b>
+                Carbs: <b><?php echo get_rec_carbs($_GET["id"])?>g</b>
               </li>
               <li>
-                Fiber <b>XXXg</b>
+                Fiber: <b><?php echo get_rec_fiber($_GET["id"])?>g</b>
               </li>
               <li>
-                Protein <b>XXXg</b>
+                Protein: <b><?php echo get_rec_protein($_GET["id"])?>g</b>
               </li>
               <li>
-                Sugar <b>XXXg</b>
+                Sugar: <b><?php echo get_rec_sugar($_GET["id"])?>g</b>
               </li>
             </ul>
           </div>
@@ -256,35 +156,7 @@
           <h5>
             Method
           </h5>
-          <ol>
-            <li>
-              <p>
-                Mix the marinade ingredients, oil, soy sauce and chili sauce,
-                finely chopped scallions, salt, pepper, garlic and paprika cream,
-                pour into a double nylon bag, add the chicken breast fillets, shake
-                well and refrigerate overnight.
-              </p>
-              <img class="recipeimg" src="./../assets/recipes/chicken2.png" alt="">
-            </li>
-            <li>
-              <p>
-                Mix the marinade ingredients, oil, soy sauce and chili sauce,
-                finely chopped scallions, salt, pepper, garlic and paprika cream,
-                pour into a double nylon bag, add the chicken breast fillets, shake
-                well and refrigerate overnight.
-              </p>
-              <img src="./../assets/recipes/chicken3.png" alt="">
-            </li>
-            <li>
-              <p>
-                Mix the marinade ingredients, oil, soy sauce and chili sauce,
-                finely chopped scallions, salt, pepper, garlic and paprika cream,
-                pour into a double nylon bag, add the chicken breast fillets, shake
-                well and refrigerate overnight.
-              </p>
-              <img src="./../assets/recipes/chicken4.png" alt="">
-            </li>
-          </ol>
+          <?php get_methods($_GET["id"])?>
         </div>
       </div>
     </main>

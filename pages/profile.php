@@ -136,12 +136,13 @@
               <input type="text" id="npass" name="npass" required>
             </fieldset>
             <fieldset>
-              <label for="mobile">Confirm New Password:</label>
-              <input type="tel" id="mobile" name="mobile" required>
+              <label for="cpass">Confirm New Password:</label>
+              <input type="text" id="cpass" name="cpass" required>
             </fieldset>
             <div class="credsubmit">
               <button>Submit</button>
             </div>
+            <span class="er"><?php if(isset($_SESSION["ret"])){echo $_SESSION["ret"];}?></span>
           </form>
         </div>
       </div>
@@ -209,6 +210,8 @@
     <hr>
     <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
   </footer>
+  <?php if(isset($_SESSION["sc"])){echo $_SESSION["sc"];}?>
+  <?php ?>
   <script src="./recipescript.js"></script>
   <script src="./profscript.js"></script>
 </html>
