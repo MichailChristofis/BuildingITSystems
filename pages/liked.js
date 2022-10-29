@@ -11,3 +11,15 @@ _s(".next").addEventListener("click", () => {
   hi -= 100;
   _s(".slides").style.transform = `translate3D(${hi}%, 0, 0)`;
 });
+querySelector(".foodimg").addEventListener("click", (e) => {
+  alert("HI");
+  if (e.target.classList.contains("full")) {
+    e.target.src = "./../assets/heart.png";
+    e.target.classList.toggle("empty");
+    e.target.classList.toggle("full");
+  } else {
+    e.target.src = "./../assets/fullheart.svg";
+    e.target.classList.toggle("empty");
+    e.target.classList.toggle("full");
+  }
+});
