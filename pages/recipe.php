@@ -22,8 +22,8 @@
               <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
               <img class="im" src="<?php echo get_prof_img()?>" alt="profile image">
             </div>
-            <span class="usr">@jennifer.daniels</span>
-            <h5 class="boxname">Jennifer Daniels</h5>
+            <span class="usr"><?php echo get_prof_email()?></span>
+            <h5 class="boxname"><?php echo get_prof_fname()?> <?php echo get_prof_lname()?></h5>
             <div class="profilelinks">
               <a href="./profile.php">Account</a>
               <a href="./liked.php">Liked Recipes</a>
