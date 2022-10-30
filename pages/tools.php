@@ -194,8 +194,8 @@ function get_cuisine($type){
     $liked=$connection->exec("SELECT recipe.id, recipe.name, recipe.img, recipe.time, recipe.rating FROM recipe JOIN(SELECT id FROM likes) tab1 ON tab1.id=recipe.id");
     echo "<div class=\"slide\"><div class=\"slideinner\">";
     while($res=$liked->fetch(PDO::FETCH_ASSOC)){
-      echo <<< "CDATA";
-      
+      echo <<< "CDATA"
+      asdf
       CDATA;
     }
   }

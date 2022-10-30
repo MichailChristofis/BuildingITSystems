@@ -149,8 +149,5 @@
     </footer>
     <?php if(isset($_SESSION["scr"])){echo $_SESSION["scr"];}?>
     <script src="./indexscript.js"></script>
-    <script src="./script.js">
-      
-    </script>
   </body>
 </html>
