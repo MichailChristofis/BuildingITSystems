@@ -63,3 +63,7 @@ document.querySelector(".in").addEventListener("keypress", (e) => {
     document.querySelector(".searchform").submit();
   }
 });
+
+document.querySelector(".magnifying").addEventListener("click", () => {
+  document.querySelector(".searchform").submit();
+});

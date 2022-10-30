@@ -229,10 +229,20 @@ function get_liked(){
   echo "</div></div>";
 }
 function get_res(){
-  global $connection;
-  $search=$connection->prepare("SELECT name, time, img, id, rating FROM recipe WHERE LOWER(name) LIKE :a");
-  $st="%".$_GET["in"]."%";
-  $search->execute(["a"=>$st]);
+  global $connection, $m;
+  $searchtype=$connection->prepare("SELECT searchtype FROM profile WHERE m=:a");
+  $searchtype->execute(["a"=>$m]);
+  $type=$searchtype->fetch(PDO::FETCH_ASSOC);
+  if($type["searchtype"]=="title"){
+    $search=$connection->prepare("SELECT name, time, img, id, rating FROM recipe WHERE LOWER(name) LIKE :a");
+    $st="%".$_GET["in"]."%";
+    $search->execute(["a"=>$st]);
+  }
+  else{
+    $search=$connection->prepare("SELECT name, time, img, recipe.id, rating, tab1.ingredient ingredient FROM recipe JOIN (SELECT ingredient, id FROM ingredients) tab1 WHERE tab1.id=recipe.id AND LOWER(tab1.ingredient) LIKE :a GROUP BY recipe.id");
+    $st="%".$_GET["in"]."%";
+    $search->execute(["a"=>$st]);
+  }
   echo "<div class=\"slide\"><div class=\"slideinner\">";
   $coun=0;
   while($res=$search->fetch(PDO::FETCH_ASSOC)){
@@ -266,5 +276,48 @@ function get_res(){
     $coun++;
   }
   echo "</div></div>";
+}
+function add_to_history(){
+  global $connection, $m;
+  $searchtype=$connection->prepare("SELECT searchtype FROM profile WHERE m=:a");
+  $searchtype->execute(["a"=>$m]);
+  $res=$searchtype->fetch(PDO::FETCH_ASSOC);
+  $add=$connection->prepare("INSERT INTO history(m, date, search, searchtype) VALUES(:a, :b, :c, :d)");
+  $date = date('Y-m-d H:i:s');
+  $add->execute(["a"=>$m, "b"=>$date, "c"=>$_GET["in"], "d"=>$res["searchtype"]]);
+}
+function get_history(){
+  global $connection, $m;
+  $history=$connection->prepare("SELECT date, search, searchtype FROM history WHERE m=:a");
+  $history->execute(["a"=>$m]);
+  while($res=$history->fetch(PDO::FETCH_ASSOC)){
+    echo <<< "CDATA"
+    <tr>
+      <td>{$res['date']}</td>
+      <td>{$res['search']}</td>
+      <td>{$res['searchtype']}</td>
+    </tr>
+    CDATA;
+  }
+}
+function fi(){
+  global $connection, $m;
+  $searchtype=$connection->prepare("SELECT searchtype FROM profile WHERE m=:a");
+  $searchtype->execute(["a"=>$m]);
+  $res=$searchtype->fetch(PDO::FETCH_ASSOC);
+  if($res["searchtype"]=="title"){
+    return "selected";
+  }
+  return "";
+}
+function se(){
+  global $connection, $m;
+  $searchtype=$connection->prepare("SELECT searchtype FROM profile WHERE m=:a");
+  $searchtype->execute(["a"=>$m]);
+  $res=$searchtype->fetch(PDO::FETCH_ASSOC);
+  if($res["searchtype"]=="ingredient"){
+    return "selected";
+  }
+  return "";
 }
 ?>

@@ -77,6 +77,13 @@
             <label for="mobile">Mobile:</label>
             <input type="tel" id="mobile" name="mobile" required>
           </fieldset>
+          <fieldset>
+            <label for="How to search">How would you like to search?</label>
+            <select name="searchtype" id="searchtyp">
+              <option value="title" <?php echo fi()?>>Search by recipe title.</option>
+              <option value="ingredient" <?php echo se()?>>Search by recipe ingredients.</option>
+            </select>
+          </fieldset>
           <div class="submit">
             <button>Submit</button>
           </div>
@@ -86,39 +93,9 @@
             <tr>
               <th class="da">Date</th>
               <th class="se">Search</th>
+              <th class="th">Search Type</th>
             </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
+            <?php get_history()?>
           </table>
         </div>
         <div class="no3 nodisplay">
@@ -191,7 +168,7 @@
           </div>
           <div class="flex aligncenter">
             <img src="./../assets/email.png" class="emicon" alt="email icon">
-            <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
+            <a class="colw popno emsi emtext" href="mailto:support@recipewis.recipes">support@recipewis.recipes</a>
           </div>
           <div class="flex aligncenter contacttop">
             <img src="./../assets/phone.png" class="phicon" alt="phone icon">

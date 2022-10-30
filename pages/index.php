@@ -131,7 +131,7 @@
           </div>
           <div class="flex aligncenter">
             <img src="./../assets/email.png" class="emicon" alt="email icon">
-            <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
+            <a class="colw popno emsi emtext" href="mailto:support@recipewis.recipes">support@recipewis.recipes</a>
           </div>
           <div class="flex aligncenter contacttop">
             <img src="./../assets/phone.png" class="phicon" alt="phone icon">

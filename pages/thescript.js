@@ -81,8 +81,10 @@ document.querySelector(".b4").addEventListener("click", () => {
 });
 document.querySelector(".in").addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    console.log("HI");
     e.preventDefault();
     document.querySelector(".searchform").submit();
   }
+});
+document.querySelector(".magnifying").addEventListener("click", () => {
+  document.querySelector(".searchform").submit();
 });

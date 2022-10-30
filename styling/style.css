@@ -671,12 +671,16 @@ hr {
   border-style: none;
   margin-top: 1.2vw;
 }
-.myprofile fieldset input {
+.myprofile fieldset input,
+.myprofile fieldset select {
   width: 100%;
   display: block;
   height: 2.2vw;
   border-radius: 0.6vw;
   font-size: 1.2vw;
+}
+.myprofile fieldset select {
+  background-color: white;
 }
 .myprofile fieldset label {
   display: block;
@@ -713,10 +717,13 @@ th {
   font-weight: bold;
 }
 .da {
-  width: 12vw;
+  width: 13vw;
 }
 .se {
   width: 25vw;
+}
+.th {
+  width: 12vw;
 }
 .creds {
   margin-left: 12vw;
