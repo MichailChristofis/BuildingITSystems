@@ -1,11 +1,9 @@
-alert("HI");
 let popsearch = document.querySelector(".popsearch"),
   search = document.querySelector(".in"),
   foodsection = document.querySelector(".foodsection");
 let message = document.querySelector("#mes"),
   meschar = document.querySelector(".meschar");
 let profile = document.querySelector(".toggleprof");
-alert("HI");
 window.addEventListener("click", (e) => {
   let box = document.querySelector(".toggleprof");
   let fi = document.querySelector(".profile-box");
@@ -36,8 +34,12 @@ foodsection.addEventListener("click", (e) => {
   }
 });
 
+message.addEventListener("input", () => {
+  let mescount = message.value.length;
+  meschar.innerText = mescount + "/256";
+});
+
 document.querySelector(".b1").addEventListener("click", () => {
-  alert("HI");
   document.querySelector(".b1").classList.add("pressed");
   document.querySelector(".b2").classList.remove("pressed");
   document.querySelector(".b3").classList.remove("pressed");
@@ -76,4 +78,11 @@ document.querySelector(".b4").addEventListener("click", () => {
   document.querySelector(".french").classList.add("goaway");
   document.querySelector(".english").classList.add("goaway");
   document.querySelector(".australian").classList.remove("goaway");
+});
+document.querySelector(".in").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    console.log("HI");
+    e.preventDefault();
+    document.querySelector(".searchform").submit();
+  }
 });

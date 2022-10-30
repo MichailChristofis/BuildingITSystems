@@ -189,15 +189,82 @@ function get_cuisine($type){
     }
     echo "</div></div>";
   }
-  function get_liked(){
-    global $connection, $m;
-    $liked=$connection->exec("SELECT recipe.id, recipe.name, recipe.img, recipe.time, recipe.rating FROM recipe JOIN(SELECT id FROM likes) tab1 ON tab1.id=recipe.id");
-    echo "<div class=\"slide\"><div class=\"slideinner\">";
-    while($res=$liked->fetch(PDO::FETCH_ASSOC)){
-      echo <<< "CDATA"
-      asdf
-      CDATA;
+}
+function get_liked(){
+  global $connection, $m;
+  $liked=$connection->prepare("SELECT recipe.id, name, img, time, rating FROM recipe JOIN(SELECT id, m FROM likes) tab1 ON tab1.id=recipe.id WHERE tab1.m=:a");
+  $liked->execute(["a"=>$m]);
+  echo "<div class=\"slide\"><div class=\"slideinner\">";
+  $coun=0;
+  while($res=$liked->fetch(PDO::FETCH_ASSOC)){
+    if($coun%6==0 && $coun!=0){
+      echo "</div></div><div class=\"slide\"><div class=\"slideinner\">";
     }
+    echo <<< "CDATA"
+    <div>
+      <div class="foodimg">
+        <a style="cursor: default" href="./ridlike.php?id={$res['id']}"><img class="like full" src="./../assets/fullheart.svg" alt="heart image"></a>
+        <div class="duration">
+          <img src="./../assets/clock.svg" alt="clock image">
+          <span class="dur">{$res['time']} min</span>
+        </div>
+        <a href="./recipe.php?id={$res['id']}"><img class="images" src="./../admin/Uploads/recipe/{$res['img']}" alt="burger image"></a>
+      </div>
+      <div class="food-text">
+        <h3>
+          <a class="reclink" href="">{$res['name']}</a>
+        </h3>
+      </div>
+      <div class="rating">
+    CDATA;
+    for($i=0; $i<$res['rating']; $i++){
+      echo "<img src=\"./../assets/star-solid.png\" alt=\"solid star\">";
+    }
+    for($i=$res['rating']; $i<5; $i++){
+      echo "<img src=\"./../assets/star-regular.png\" alt=\"solid star\">";
+    }
+    echo "</div></div>";
+    $coun++;
   }
+  echo "</div></div>";
+}
+function get_res(){
+  global $connection;
+  $search=$connection->prepare("SELECT name, time, img, id, rating FROM recipe WHERE LOWER(name) LIKE :a");
+  $st="%".$_GET["in"]."%";
+  $search->execute(["a"=>$st]);
+  echo "<div class=\"slide\"><div class=\"slideinner\">";
+  $coun=0;
+  while($res=$search->fetch(PDO::FETCH_ASSOC)){
+    if($coun%6==0 && $coun!=0){
+      echo "</div></div><div class=\"slide\"><div class=\"slideinner\">";
+    }
+    echo <<< "CDATA"
+    <div>
+      <div class="foodimg">
+        <a style="cursor: default" href="./changelike.php?id={$res['id']}"><img class="like full" src="./../assets/fullheart.svg" alt="heart image"></a>
+        <div class="duration">
+          <img src="./../assets/clock.svg" alt="clock image">
+          <span class="dur">{$res['time']} min</span>
+        </div>
+        <a href="./recipe.php?id={$res['id']}"><img class="images" src="./../admin/Uploads/recipe/{$res['img']}" alt="burger image"></a>
+      </div>
+      <div class="food-text">
+        <h3>
+          <a class="reclink" href="">{$res['name']}</a>
+        </h3>
+      </div>
+      <div class="rating">
+    CDATA;
+    for($i=0; $i<$res['rating']; $i++){
+      echo "<img src=\"./../assets/star-solid.png\" alt=\"solid star\">";
+    }
+    for($i=$res['rating']; $i<5; $i++){
+      echo "<img src=\"./../assets/star-regular.png\" alt=\"solid star\">";
+    }
+    echo "</div></div>";
+    $coun++;
+  }
+  echo "</div></div>";
 }
 ?>

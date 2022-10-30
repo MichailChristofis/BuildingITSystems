@@ -233,6 +233,13 @@ body {
   background-color: grey;
   color: white;
 }
+.searchform {
+  display: block;
+  height: 3.5vw;
+}
+.searchform input {
+  display: block;
+}
 .foodsection {
   display: grid;
   grid-template-columns: repeat(3, 28%);
@@ -838,7 +845,12 @@ button.next {
   .searchdiv {
     width: 50vw;
   }
+  .searchform {
+    display: block;
+    height: 5vw;
+  }
   .in {
+    display: block;
     width: 50vw;
     height: 5vw;
     border-radius: 3vw;
@@ -1068,6 +1080,9 @@ button.next {
   }
   .searchdiv {
     width: 700px;
+  }
+  .searchform {
+    height: 60px;
   }
   .in {
     font-size: 20px;

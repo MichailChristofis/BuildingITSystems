@@ -19,6 +19,11 @@ window.addEventListener("click", (e) => {
   }
 });
 
+message.addEventListener("input", () => {
+  let mescount = message.value.length;
+  meschar.innerText = mescount + "/256";
+});
+
 popsearch.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
     search.value = e.target.innerText;
@@ -49,5 +54,12 @@ document.querySelector(".slideinner").addEventListener("click", (e) => {
     e.target.src = "./../assets/fullheart.svg";
     e.target.classList.toggle("empty");
     e.target.classList.toggle("full");
+  }
+});
+document.querySelector(".in").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    console.log("HI");
+    e.preventDefault();
+    document.querySelector(".searchform").submit();
   }
 });
