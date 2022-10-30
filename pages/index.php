@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php 
+    include "tools.php";
+    if(!isset($_SESSION["m"])){
+      echo "<script>localStorage.clear();window.location.href='./signIn.php';</script>";
+    }
+  ?>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RecipeWise</title>
     <link id='stylecss' type="text/css" rel="stylesheet" href="./../styling/style.css">
   </head>
@@ -9,18 +17,18 @@
     <div class="to">
       <div class="flex spacebetween aligncenter">
           <a href="./index.php" class="nodec"><span class="tit">RecipeWise</span></a>
-        <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
+        <img class="im toggleprof" src="<?php echo get_prof_img()?>" alt="profile image" tabindex="1">
         <div class="profile-box profempty">
           <div class="profile-in">
             <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
-            <img class="im" src="./../assets/prof.png" alt="profile image">
+            <img class="im" src="<?php echo get_prof_img()?>" alt="profile image">
           </div>
-          <span class="usr">@jennifer.daniels</span>
-          <h5 class="boxname">Jennifer Daniels</h5>
+          <span class="usr"><?php echo get_prof_email()?></span>
+          <h5 class="boxname"><?php echo get_prof_fname()?> <?php echo get_prof_lname()?></h5>
           <div class="profilelinks">
             <a href="./profile.php">Account</a>
             <a href="./liked.php">Liked Recipes</a>
-            <a href="">Log Out</a>
+            <a href="./logout.php">Log Out</a>
           </div>
         </div>
       </div>
@@ -29,7 +37,9 @@
         <span class="search2">&nbsp;mexican...</span>
       </div>
       <div class="flex justifycenter searchdiv">
-        <input type="text" class="in" placeholder="Search">
+        <form class="searchform" action="./results.php" method="GET">
+          <input type="text" class="in" id="in" name="in" placeholder="Search">
+        </form>
         <img class="magnifying" src="./../assets/magnifying-glass.png" alt="Magnifying glass">
         <img class="shuffle" src="./../assets/shuffle.png" alt="Shuffle image">
       </div>
@@ -50,159 +60,37 @@
     </div>
     <img class="svg" src="./../assets/headsmall.svg" alt="">
     <div class="foodtype flex justifycenter">
-      <button>
+      <button class="b1 pressed">
         Spanish
       </button>
-      <button>
+      <button class="b2">
         French
       </button>
-      <button>
+      <button class="b3">
         English
       </button>
-      <button>
+      <button class="b4">
         Australian
       </button>
     </div>
     <main>
-      <section class="foodsection">
-        <div>
-          <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
-            <div class="duration">
-              <img src="./../assets/clock.svg" alt="clock image">
-              <span class="dur">40 min</span>
-            </div>
-            <a href=""><img class="images" src="./../assets/burger.png" alt="burger image"></a>
-          </div>
-          <div class="food-text">
-            <h3>
-              <a class="reclink" href="">The Breakfast Burger</a>
-            </h3>
-          </div>
-          <div class="rating">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-          </div>
-        </div>
-        <div>
-          <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
-            <div class="duration">
-              <img src="./../assets/clock.svg" alt="clock image">
-              <span class="dur">40 min</span>
-            </div>
-            <a href=""><img class="images" src="./../assets/meat.png" alt="burger image"></a>
-          </div>
-          <div class="food-text">
-            <h3>
-              <a class="reclink" href="">Flank Steak</a>
-            </h3>
-          </div>
-          <div class="rating">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-          </div>
-        </div>
-        <div>
-          <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
-            <div class="duration">
-              <img src="./../assets/clock.svg" alt="clock image">
-              <span class="dur">40 min</span>
-            </div>
-            <a href=""><img class="images" src="./../assets/steak.png" alt="burger image"></a>
-          </div>
-          <div class="food-text">
-            <h3>
-              <a class="reclink" href="">Steak From Heaven</a>
-            </h3>
-          </div>
-          <div class="rating">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-          </div>
-        </div>
-        <div>
-          <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
-            <div class="duration">
-              <img src="./../assets/clock.svg" alt="clock image">
-              <span class="dur">40 min</span>
-            </div>
-            <a href=""><img class="images" src="./../assets/sushi.png" alt="burger image"></a>
-          </div>
-          <div class="food-text">
-            <h3>
-              <a class="reclink" href="">Salmon Nigiri</a>
-            </h3>
-          </div>
-          <div class="rating">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-          </div>
-        </div>
-        <div>
-          <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
-            <div class="duration">
-              <img src="./../assets/clock.svg" alt="clock image">
-              <span class="dur">40 min</span>
-            </div>
-            <a href=""><img class="images" src="./../assets/rice.png" alt="burger image"></a>
-          </div>
-          <div class="food-text">
-            <h3>
-              <a class="reclink" href="">Fried Rice</a>
-            </h3>
-          </div>
-          <div class="rating">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-regular.png" alt="empty star">
-          </div>
-        </div>
-        <div>
-          <div class="foodimg">
-            <img class="like empty" src="./../assets/heart.png" alt="heart image">
-            <div class="duration">
-              <img src="./../assets/clock.svg" alt="clock image">
-              <span class="dur">40 min</span>
-            </div>
-            <a href="./recipe.php"><img class="images" src="./../assets/chicken.png" alt="burger image"></a>
-          </div>
-          <div class="food-text">
-            <h3>
-              <a class="reclink" href="./recipe.php">Grilled Chicken Breast</a>
-            </h3>
-          </div>
-          <div class="rating">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-            <img src="./../assets/star-solid.png" alt="solid star">
-          </div>
-        </div>
+      <section class="foodsection spanish">
+        <?php get_cuisine("Spanish")?>
+      </section>
+      <section class="foodsection french goaway">
+        <?php get_cuisine("French")?>
+      </section>
+      <section class="foodsection english goaway">
+        <?php get_cuisine("English")?>
+      </section>
+      <section class="foodsection australian goaway">
+        <?php get_cuisine("Australian")?>
       </section>
     </main>
   </body>
   <footer>
     <div class="footerdiv">
-      <div class="flex spacebetween">
+      <div class="flex spacebetween contactusform">
         <div class="contactw">
           <span class="colw popbo consi">Contact Us</span>
           <div class="flex spacebetween mato mabo">
@@ -235,11 +123,15 @@
             <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
           </div>
         </div>
-        <div>
+        <div class="ladiv">
           <img src="./../assets/logo.png" class="log" alt="Logo">
+          <div class="logoclass">
+            <h6 class="logo">Recipe</h6>
+            <h6 class="logo">Wise</h6>
+          </div>
           <div class="flex aligncenter">
             <img src="./../assets/email.png" class="emicon" alt="email icon">
-            <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
+            <a class="colw popno emsi emtext" href="mailto:support@recipewis.recipes">support@recipewis.recipes</a>
           </div>
           <div class="flex aligncenter contacttop">
             <img src="./../assets/phone.png" class="phicon" alt="phone icon">
@@ -258,7 +150,6 @@
     <hr>
     <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
   </footer>
-  <script src="./script.js">
-    
-  </script>
+  <script src="./thescript.js" type="text/javascript"></script>
+  <?php if(isset($_SESSION["scr"])){echo $_SESSION["scr"];}?>
 </html>

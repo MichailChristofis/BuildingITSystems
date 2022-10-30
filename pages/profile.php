@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php 
+    include "tools.php";
+    if(!isset($_SESSION["m"])){
+      echo "<script>localStorage.clear();window.location.href='./signIn.php';</script>";
+    }
+  ?>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RecipeWise</title>
     <link id='stylecss' type="text/css" rel="stylesheet" href="./../styling/style.css">
   </head>
@@ -9,18 +17,18 @@
     <div class="to">
       <div class="flex spacebetween aligncenter">
           <a href="./index.php" class="nodec"><span class="tit">RecipeWise</span></a>
-        <img class="im toggleprof" src="./../assets/prof.png" alt="profile image" tabindex="1">
+        <img class="im toggleprof" src="<?php echo get_prof_img()?>" alt="profile image" tabindex="1">
         <div class="profile-box profempty">
           <div class="profile-in">
             <img class="edit" src="./../assets/editprofile.svg" alt="Edit profile image">
-            <img class="im" src="./../assets/prof.png" alt="profile image">
+            <img class="im" src="<?php echo get_prof_img()?>" alt="profile image">
           </div>
-          <span class="usr">@jennifer.daniels</span>
-          <h5 class="boxname">Jennifer Daniels</h5>
+          <span class="usr"><?php echo get_prof_email()?></span>
+          <h5 class="boxname"><?php echo get_prof_fname()?> <?php echo get_prof_lname()?></h5>
           <div class="profilelinks">
             <a href="./profile.php">Account</a>
             <a href="./liked.php">Liked Recipes</a>
-            <a href="">Log Out</a>
+            <a href="./logout.php">Log Out</a>
           </div>
         </div>
       </div>
@@ -29,7 +37,7 @@
     <main class="account">
       <div class="flex">
         <span class="t">Welcome back,&nbsp;</span>
-        <span class="red t">Jennifer</span>
+        <span class="red t"><?php echo get_prof_fname()?></span>
         <span class="t">!</span>
       </div>
       <div class="det spacebetween">
@@ -40,10 +48,13 @@
           <button class="lah5 op nu3">Security</button>
         </div>
         <div class="topprof no1">
-          <img class="setprof" src="./../assets/prof.png" alt="">
+          <img class="setprof" src=<?php echo get_prof_img()?> alt="">
           <div>
-            <button class="changepic">Change Profile Picture</button>
-            <button class="change flex justifycenter aligncenter">
+            <form class="changeform" enctype="multipart/form-data" action="./profimgchange.php" method="POST">
+              <label for="profilepic" class="changepic">Change Profile Picture</label>
+              <input type="file" style="visibility:hidden" id="profilepic" name="profilepic" onchange="form.submit()">
+            </form>
+            <button onclick="window.location.href='defimg.php'" class="change flex justifycenter aligncenter">
               <img src="./../assets/delete.svg" alt="Delete button">
               <span>Remove</span>
             </button>
@@ -66,6 +77,13 @@
             <label for="mobile">Mobile:</label>
             <input type="tel" id="mobile" name="mobile" required>
           </fieldset>
+          <fieldset>
+            <label for="How to search">How would you like to search?</label>
+            <select name="searchtype" id="searchtyp">
+              <option value="title" <?php echo fi()?>>Search by recipe title.</option>
+              <option value="ingredient" <?php echo se()?>>Search by recipe ingredients.</option>
+            </select>
+          </fieldset>
           <div class="submit">
             <button>Submit</button>
           </div>
@@ -75,43 +93,13 @@
             <tr>
               <th class="da">Date</th>
               <th class="se">Search</th>
+              <th class="th">Search Type</th>
             </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
-            <tr>
-              <td>dd/mm/yyyy</td>
-              <td>Lorem Ipsum</td>
-            </tr>
+            <?php get_history()?>
           </table>
         </div>
         <div class="no3 nodisplay">
-          <form class="creds" action="./profchanges.php" method="POST"> 
+          <form class="creds" action="./editcredentials.php" method="POST"> 
             <fieldset>
               <label for="uname">Username:</label>
               <input type="text" id="uname" name="uname" required>
@@ -125,12 +113,13 @@
               <input type="text" id="npass" name="npass" required>
             </fieldset>
             <fieldset>
-              <label for="mobile">Confirm New Password:</label>
-              <input type="tel" id="mobile" name="mobile" required>
+              <label for="cpass">Confirm New Password:</label>
+              <input type="text" id="cpass" name="cpass" required>
             </fieldset>
             <div class="credsubmit">
               <button>Submit</button>
             </div>
+            <span class="er"><?php if(isset($_SESSION["ret"])){echo $_SESSION["ret"];}?></span>
           </form>
         </div>
       </div>
@@ -138,7 +127,7 @@
   </body>
   <footer>
     <div class="footerdiv">
-      <div class="flex spacebetween">
+      <div class="flex spacebetween contactusform">
         <div class="contactw">
           <span class="colw popbo consi">Contact Us</span>
           <div class="flex spacebetween mato mabo">
@@ -152,15 +141,17 @@
           <div class="message">
             <span class="bl colw popno mabo emsi">Message:</span>
             <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
-            <span class="meschar">
-              0/256
-            </span>
-            <button type="submit">
-              <img src="./../assets/plane.svg" alt="plane image">
-            </button>
+            <div class="numdiv">
+              <span class="meschar">
+                0/256
+              </span>
+              <button type="submit">
+                <img src="./../assets/plane.svg" alt="plane image">
+              </button>
+            </div>
           </div>
         </div>
-        <div>
+        <div class="sitemap">
           <span class="colw popbo consi">Sitemap</span>
           <div>
             <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
@@ -169,11 +160,15 @@
             <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
           </div>
         </div>
-        <div>
+        <div class="ladiv">
           <img src="./../assets/logo.png" class="log" alt="Logo">
+          <div class="logoclass">
+            <h6 class="logo">Recipe</h6>
+            <h6 class="logo">Wise</h6>
+          </div>
           <div class="flex aligncenter">
             <img src="./../assets/email.png" class="emicon" alt="email icon">
-            <a class="colw popno emsi emtext" href="mailto:support@recipewise.com">support@recipewise.com</a>
+            <a class="colw popno emsi emtext" href="mailto:support@recipewis.recipes">support@recipewis.recipes</a>
           </div>
           <div class="flex aligncenter contacttop">
             <img src="./../assets/phone.png" class="phicon" alt="phone icon">
@@ -192,6 +187,8 @@
     <hr>
     <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
   </footer>
+  <?php if(isset($_SESSION["sc"])){echo $_SESSION["sc"];}?>
+  <?php ?>
   <script src="./recipescript.js"></script>
   <script src="./profscript.js"></script>
 </html>

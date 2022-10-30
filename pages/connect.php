@@ -1,7 +1,6 @@
 <?php
 
 Class Database{
- 
 	private $server = "mysql:host=localhost;dbname=recipe";
 	private $username = "root";
 	private $password = "";
@@ -26,5 +25,8 @@ Class Database{
 }
 
 $pdo = new Database();
- 
+ini_set('session.gc_maxlifetime', 432000);
+session_set_cookie_params(432000);
+session_start();
+
 ?>
