@@ -1,3 +1,6 @@
+/*:root {
+  --sl-height: 301px;
+}*/
 @font-face {
   font-family: Poppins;
   src: url(./../Poppins/Poppins-Bold.ttf);
@@ -249,6 +252,20 @@ body {
   max-width: 70vw;
   margin: 3.5vw auto;
 }
+.linky {
+  display: block;
+}
+.linkhearty {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3vw;
+  margin-top: 2vw;
+}
+.hearty1 {
+  width: 2vw;
+  display: block;
+}
 .foods {
   position: relative;
   text-align: center;
@@ -347,6 +364,33 @@ h3 {
   width: 2vw;
   padding-right: 0.5vw;
 }
+
+.ppbody {
+  text-align: justify;
+  color: #000000;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.ppbody h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  /* font-size: 56px; */
+}
+
+.ppbody h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  /* font-size: 32px; */
+}
+
+.ppbody p {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
 footer {
   padding: 4vw 8vw 4vw 8vw;
   background-color: #1e1e1e;
@@ -489,6 +533,105 @@ hr {
 }
 .info img {
   margin-bottom: 2vw;
+}
+#ratingform {
+  max-height: 0px;
+  overflow-y: hidden;
+  transition: 0.4s ease;
+}
+#ratingform.active {
+  max-height: 100vh;
+}
+#getcomments {
+  display: block;
+  width: 10vw;
+  height: 3vw;
+  background-color: #fa003f;
+  color: white;
+  border-radius: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1vw;
+}
+.user {
+  width: 100%;
+}
+.user img {
+  display: block;
+  width: 6vw;
+  border-radius: 3vw;
+  margin-right: 3vw;
+}
+.rightcomment h6 {
+  font-weight: bold;
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+  display: block;
+}
+.rightcomment span {
+  font-weight: bold;
+  font-size: 1.5vw;
+  display: block;
+}
+.comments {
+  margin-top: 3vw;
+}
+.user-rating {
+  width: 10vw;
+  margin-top: 1vw;
+}
+.user-rating img {
+  width: 1.6vw;
+  display: block;
+}
+.user-comment {
+  margin-top: 1vw;
+  font-size: 1.3vw;
+}
+.ratings button {
+  border: none;
+  background: none;
+}
+.ratings {
+  width: 12vw;
+}
+.ratings button img {
+  display: block;
+  width: 2vw;
+}
+.ratinglabel {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-left: 0.3vw;
+  margin-bottom: 0.5vw;
+  display: block;
+}
+.com {
+  display: block;
+  font-size: 1.3vw;
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+}
+#comment {
+  outline: none;
+  resize: none;
+  width: 100%;
+  height: 20vw;
+  display: block;
+  border-radius: 1vw;
+  padding: 1vw;
+}
+.sub {
+  display: block;
+  width: 8vw;
+  height: 3vw;
+  background-color: #fa003f;
+  color: white;
+  border-radius: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3vw;
+  margin-top: 2vw;
 }
 .to2 {
   position: absolute;
@@ -671,6 +814,77 @@ hr {
   border-style: none;
   margin-top: 1.2vw;
 }
+.herotitle {
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10vw;
+  padding-bottom: 20vh;
+  padding-top: 10vh;
+}
+
+.aboutus {
+  padding-top: 2vw;
+}
+
+#ourstorytext {
+  text-align: center;
+  flex: auto;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  font-size: 1.2em;
+}
+
+#aboutusperson {
+  display: flex;
+  justify-content: center;
+}
+
+.theteam {
+  padding-left: 10vw;
+  padding-bottom: 5vh;
+}
+
+.teamimages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.teamimg {
+  padding-top: 3vh;
+  width: 15%;
+  height: auto;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.reviews h2 {
+  text-align: center;
+}
+
+.reviews img {
+  height: auto;
+  width: 25%;
+  padding: 2%;
+}
 .myprofile fieldset input,
 .myprofile fieldset select {
   width: 100%;
@@ -805,6 +1019,16 @@ button.next {
   width: 5vw;
 }
 @media (max-width: 1050px) {
+  .slides {
+    flex-wrap: wrap;
+    max-height: var(--sl-height);
+    overflow-y: visible;
+  }
+  .foods {
+    max-height: var(--sl-height);
+    overflow-y: hidden;
+  }
+
   .foodtype button {
     font-size: 1.6vw;
     width: 13vw;

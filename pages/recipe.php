@@ -59,6 +59,9 @@
               <img src="./../assets/clock.svg" alt="duration">
               <span><?php echo get_rec_time($_GET["id"])?> min</span>
             </div>
+            <div class="nutdiv">
+              <a href="./changelike.php?id=<?php echo $_GET["id"]?>"><img class="hearty1" src="./../assets/<?php is_liked1()?>" alt="duration"></a>
+            </div>
           </div>
         </div>
       </div>
@@ -68,19 +71,19 @@
         <div class="flex spacebetween">
           <div class="nudiv">
             <img src="./../assets/protein.svg" alt="protein">
-            <span>60g protein</span>
+            <span><?php echo get_rec_protein($_GET["id"])?>g protein</span>
           </div>
           <div class="nudiv">
             <img src="./../assets/carbs.svg" alt="protein">
-            <span>20g carbs</span>
+            <span><?php echo get_rec_carbs($_GET["id"])?>g carbs</span>
           </div>
           <div class="nudiv">
             <img src="./../assets/calories.svg" alt="calories">
-            <span>600 kcal</span>
+            <span><?php echo get_rec_cal($_GET["id"])?> kcal</span>
           </div>
           <div class="nudiv">
             <img src="./../assets/clock.svg" alt="duration">
-            <span>40 min</span>
+            <span><?php echo get_rec_time($_GET["id"])?> min</span>
           </div>
         </div>
         <div class="wstarpar">
@@ -90,6 +93,7 @@
           <img src="./../assets/star-solid-w.svg" alt="solid star image">
           <img src="./../assets/star-solid-w.svg" alt="solid star image">
         </div>
+        <a class="linky" href="./changelike.php?id=<?php echo $_GET["id"]?>"><img class="linkhearty" src="./../assets/<?php is_liked2()?>" alt="duration"></a>
       </div>
       <div class="inge">
         <div class="flex spacebetween ingeson">
@@ -159,29 +163,32 @@
           <?php get_methods($_GET["id"])?>
         </div>
       </div>
+      <button id="getcomments">Add comment</button>
+      <?php include "comments.php"?>
     </main>
   </body>
   <footer>
     <div class="footerdiv">
       <div class="flex spacebetween contactusform">
         <div class="contactw">
+          <form action="./sendemail.php" method="POST" id="sendemail"></form>
           <span class="colw popbo consi">Contact Us</span>
           <div class="flex spacebetween mato mabo">
             <span class="colw popno emsi">Email:</span>
-            <input type="text" class="email">
+            <input form="sendemail" type="text" class="email" name="email" id="email">
           </div>
           <div class="flex spacebetween mabo">
             <span class="colw popno emsi">Subject:</span>
-            <input type="text" class="subject">
+            <input form="sendemail" type="text" class="subject" name="subject" id="subject">
           </div>
           <div class="message">
             <span class="bl colw popno mabo emsi">Message:</span>
-            <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
+            <textarea form="sendemail" name="message" id="mes" class="bl" cols="35" rows="6"></textarea>
             <div class="numdiv">
               <span class="meschar">
                 0/256
               </span>
-              <button type="submit">
+              <button form="sendemail" type="submit">
                 <img src="./../assets/plane.svg" alt="plane image">
               </button>
             </div>
@@ -192,8 +199,8 @@
           <div>
             <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
             <a href="profile.php" class="nodec bl colw popno emsi mabo">My Profile</a>
-            <a href="" class="nodec bl colw popno emsi mabo">About Us</a>
-            <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
+            <a href="aboutus.php" class="nodec bl colw popno emsi mabo">About Us</a>
+            <a href="privacepolicy.php" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
           </div>
         </div>
         <div class="ladiv">
@@ -223,6 +230,10 @@
     <hr>
     <span class="allrights">&copy; 2022 RecipeWise&trade; | All Rights Reserved</span>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+		    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			  crossorigin="anonymous"></script>
+  <script src="./recipejquery.js"></script>
   <script src="./recipescript.js">
     
   </script>

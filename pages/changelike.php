@@ -5,13 +5,16 @@ $m=$_SESSION["m"];
 $id=$_GET["id"];
 $haslike=$connection->prepare("SELECT COUNT(*) FROM likes WHERE m=:a AND id=:b");
 $haslike->execute(["a"=>$m, "b"=>$id]);
+$hi=1;
 if($haslike->fetchColumn()==0){
   $like=$connection->prepare("INSERT INTO likes (m, id) VALUES (:a, :b)");
   $like->execute(["a"=>$m, "b"=>$id]);
+  $action="add";
 }
 else{
   $like=$connection->prepare("DELETE FROM likes WHERE m=:a AND id=:b");
   $like->execute(["a"=>$m, "b"=>$id]);
+  $action="remove";
 }
-header("Location: results.php");
+echo json_encode(["action"=>$action, "resp"=>$hi]);
 ?>

@@ -129,23 +129,24 @@
     <div class="footerdiv">
       <div class="flex spacebetween contactusform">
         <div class="contactw">
+          <form action="./sendemail.php" method="POST" id="sendemail"></form>
           <span class="colw popbo consi">Contact Us</span>
           <div class="flex spacebetween mato mabo">
             <span class="colw popno emsi">Email:</span>
-            <input type="text" class="email">
+            <input form="sendemail" type="text" class="email" name="email" id="email">
           </div>
           <div class="flex spacebetween mabo">
             <span class="colw popno emsi">Subject:</span>
-            <input type="text" class="subject">
+            <input form="sendemail" type="text" class="subject" name="subject" id="subject">
           </div>
           <div class="message">
             <span class="bl colw popno mabo emsi">Message:</span>
-            <textarea name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
+            <textarea form="sendemail" name="message" id="mes" class="bl" cols="35" rows="6" maxlength="256"></textarea>
             <div class="numdiv">
               <span class="meschar">
                 0/256
               </span>
-              <button type="submit">
+              <button form="sendemail" type="submit">
                 <img src="./../assets/plane.svg" alt="plane image">
               </button>
             </div>
@@ -156,8 +157,8 @@
           <div>
             <a href="index.php" class="nodec bl colw popno emsi mato mabo">Home</a>
             <a href="profile.php" class="nodec bl colw popno emsi mabo">My Profile</a>
-            <a href="" class="nodec bl colw popno emsi mabo">About Us</a>
-            <a href="" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
+            <a href="aboutus.php" class="nodec bl colw popno emsi mabo">About Us</a>
+            <a href="privacepolicy.php" class="nodec bl colw popno emsi mabo">Privacy Policy</a>
           </div>
         </div>
         <div class="ladiv">
@@ -189,6 +190,10 @@
   </footer>
   <?php if(isset($_SESSION["sc"])){echo $_SESSION["sc"];}?>
   <?php ?>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+		    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			  crossorigin="anonymous"></script>
+  <script src="./profjquery.js"></script>
   <script src="./recipescript.js"></script>
   <script src="./profscript.js"></script>
 </html>

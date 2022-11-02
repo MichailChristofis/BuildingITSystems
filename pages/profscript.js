@@ -36,3 +36,9 @@ nu3.addEventListener("click", () => {
   nu3.classList.toggle("bold");
 });
 const removeBold = () => Array.from(document.querySelectorAll(".op")).forEach((a) => a.classList.remove("bold"));
+document.querySelector("#mes").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.querySelector(".numdiv button").click();
+  }
+});

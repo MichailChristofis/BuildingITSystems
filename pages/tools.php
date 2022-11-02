@@ -190,6 +190,26 @@ function get_cuisine($type){
     echo "</div></div>";
   }
 }
+function is_liked1(){
+  global $connection, $m;
+  $heart="heart.png";
+  $isliked=$connection->prepare("SELECT COUNT(*) FROM likes WHERE id=:a AND m=:b");
+  $isliked->execute(["a"=>$_GET["id"], "b"=>$m]);
+  if($isliked->fetchColumn()>0){
+    $heart="fullheart.svg";
+  }
+  echo $heart;
+}
+function is_liked2(){
+  global $connection, $m;
+  $heart="whitelike.svg";
+  $isliked=$connection->prepare("SELECT COUNT(*) FROM likes WHERE id=:a AND m=:b");
+  $isliked->execute(["a"=>$_GET["id"], "b"=>$m]);
+  if($isliked->fetchColumn()>0){
+    $heart="whitelikefull.svg";
+  }
+  echo $heart;
+}
 function get_liked(){
   global $connection, $m;
   $liked=$connection->prepare("SELECT recipe.id, name, img, time, rating FROM recipe JOIN(SELECT id, m FROM likes) tab1 ON tab1.id=recipe.id WHERE tab1.m=:a");
@@ -233,26 +253,38 @@ function get_res(){
   $searchtype=$connection->prepare("SELECT searchtype FROM profile WHERE m=:a");
   $searchtype->execute(["a"=>$m]);
   $type=$searchtype->fetch(PDO::FETCH_ASSOC);
-  if($type["searchtype"]=="title"){
+  $mystring=$_GET["in"];
+  if($type["searchtype"]=="title" && $mystring[0]!="#"){
     $search=$connection->prepare("SELECT name, time, img, id, rating FROM recipe WHERE LOWER(name) LIKE :a");
     $st="%".$_GET["in"]."%";
     $search->execute(["a"=>$st]);
   }
-  else{
+  else if($type["searchtype"]=="ingredient" && $mystring[0]!="#"){
     $search=$connection->prepare("SELECT name, time, img, recipe.id, rating, tab1.ingredient ingredient FROM recipe JOIN (SELECT ingredient, id FROM ingredients) tab1 WHERE tab1.id=recipe.id AND LOWER(tab1.ingredient) LIKE :a GROUP BY recipe.id");
     $st="%".$_GET["in"]."%";
+    $search->execute(["a"=>$st]);
+  }
+  else{
+    $search=$connection->prepare("SELECT name, time, img, id, rating FROM recipe WHERE tag=:a");
+    $st=$_GET["in"];
     $search->execute(["a"=>$st]);
   }
   echo "<div class=\"slide\"><div class=\"slideinner\">";
   $coun=0;
   while($res=$search->fetch(PDO::FETCH_ASSOC)){
+    $heart="heart.png";
+    $isliked=$connection->prepare("SELECT COUNT(*) FROM likes WHERE id=:a AND m=:b");
+    $isliked->execute(["a"=>$res["id"], "b"=>$m]);
+    if($isliked->fetchColumn()>0){
+      $heart="fullheart.svg";
+    }
     if($coun%6==0 && $coun!=0){
       echo "</div></div><div class=\"slide\"><div class=\"slideinner\">";
     }
     echo <<< "CDATA"
     <div>
       <div class="foodimg">
-        <a style="cursor: default" href="./changelike.php?id={$res['id']}"><img class="like full" src="./../assets/fullheart.svg" alt="heart image"></a>
+        <a style="cursor: default" href="./changelike.php?id={$res['id']}"><img class="like full" src="./../assets/{$heart}" alt="heart image"></a>
         <div class="duration">
           <img src="./../assets/clock.svg" alt="clock image">
           <span class="dur">{$res['time']} min</span>
@@ -319,5 +351,47 @@ function se(){
     return "selected";
   }
   return "";
+}
+function get_comments(){
+  global $connection, $m;
+  $display=$connection->prepare("SELECT m, rating, com, tim FROM comments WHERE recid=:a");
+  $display->execute(["a"=>$_GET["id"]]);
+  while($res=$display->fetch(PDO::FETCH_ASSOC)){
+    $profile=$connection->prepare("SELECT profimg, firstname, lastname FROM profile WHERE m=:a");
+    $profile->execute(["a"=>$res["m"]]);
+    $prof=$profile->fetch(PDO::FETCH_ASSOC);
+    $rat1="<img src=\"./../assets/star-solid.png\" alt=\"\">";
+    $rat2="<img src=\"./../assets/star-regular.png\" alt=\"\">";
+    $rat="";
+    for($i=0; $i<$res["rating"]; $i++){
+      $rat.=$rat1;
+    }
+    for($i=$res["rating"]; $i<5; $i++){
+      $rat.=$rat2;
+    }
+    echo <<< "CDATA"
+    <div class="comments">
+      <div>
+        <div class="actualcomment">
+          <div class="user flex">
+            <img src="./../assets/profiles/{$res['m']}/{$prof['profimg']}" alt="">
+            <div class="rightcomment">
+              <h6>{$prof['firstname']} {$prof['lastname']}</h6>
+              <span>{$res['tim']}</span>
+            </div>
+          </div>
+          <div>
+            <div class="user-rating flex spacebetween">
+              {$rat}
+            </div>
+            <p class="user-comment">
+              {$res['com']}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    CDATA;
+  }
 }
 ?>

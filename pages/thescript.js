@@ -85,6 +85,12 @@ document.querySelector(".in").addEventListener("keypress", (e) => {
     document.querySelector(".searchform").submit();
   }
 });
+document.querySelector("#mes").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.querySelector(".numdiv button").click();
+  }
+});
 document.querySelector(".magnifying").addEventListener("click", () => {
   document.querySelector(".searchform").submit();
 });

@@ -15,3 +15,9 @@ message.addEventListener("input", () => {
   let mescount = message.value.length;
   meschar.innerText = mescount + "/256";
 });
+document.querySelector("#mes").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.querySelector(".numdiv button").click();
+  }
+});
